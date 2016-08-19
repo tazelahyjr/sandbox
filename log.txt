@@ -1,0 +1,1761 @@
+Setup Started: Aug 18, 2016 01:09:30 PM -04:00
+Writing out configuration file...
+Server Role = developer
+Code Directory = C:\projects.net\guardian\CorpEd
+Web Code Directory = C:\projects.net\guardian\CorpEd\ema
+Partner Directory = C:\projects.net\guardian\CorpEd\ema\partner
+ChartFX Temporary Directory = C:\Program Files (x86)\ChartFX for .NET 6.2\ChartFX62\Temp
+Ghostscript Directory = C:\Program Files\gs\gs8.54
+Database Connection = Data Source=tomz01;Initial Catalog=lbs_corped;Trusted_Connection=true
+DebugEnableWSS = False
+DebugEnableES = False
+LocalDB Instance = 
+Nexus User(non-production) = Nexus
+Nexus Password(non-production)= ***
+
+Setting Recovery Model to SIMPLE on non-production database [lbs_corped].
+BEGIN PreSchema Data Upgrade
+WARNING. Failed to log into system. (Is this a new database/install?) Skipping data upgrade...
+Setting up database...
+DROPPING EXEC ON [dbo].[FRContactRequest_GetActiveForUser] TO public
+DROPPING [dbo].[FRContactRequest_GetActiveForUser]
+DROPPING [dbo].[FRContactRequest_SelectOne]
+DROPPING [dbo].[FRContactRequest_Delete]
+DROPPING [dbo].[FRContactRequest_Update]
+DROPPING [dbo].[FRContactRequest_Insert]
+DROPPING [dbo].[FRContactRequest_Select]
+DROPPING [dbo].[FRContactRequest].[PK_ContactRequests]
+DROPPING [dbo].[FRContactRequest].[IsActive]
+CREATING [dbo].[FRContactRequest]
+CREATING [dbo].[FRContactRequest]
+CREATING [dbo].[UserCodeValidation]
+CREATING [dbo].[FRContactRequest].[PK_ContactRequests]
+CREATING [dbo].[UserCodeValidation].[PK_UserCodeValidation]
+CREATING [dbo].[UserCodeValidation].[FK_UserCodeValidation_User]
+CREATING [dbo].[FRContactRequest_Select]
+CREATING [dbo].[FRContactRequest_Insert]
+CREATING [dbo].[FRContactRequest_Update]
+CREATING [dbo].[FRContactRequest_Delete]
+CREATING [dbo].[FRContactRequest_SelectOne]
+CREATING [dbo].[UserCodeValidation_SelectOne]
+CREATING [dbo].[UserCodeValidation_Insert]
+CREATING [dbo].[UserCodeValidation_Delete]
+CREATING EXECUTE ON [dbo].[FRContactRequest_Delete] TO [public]
+CREATING EXECUTE ON [dbo].[FRContactRequest_Insert] TO [public]
+CREATING EXECUTE ON [dbo].[FRContactRequest_SelectOne] TO [public]
+CREATING EXECUTE ON [dbo].[FRContactRequest_Select] TO [public]
+CREATING EXECUTE ON [dbo].[FRContactRequest_Update] TO [public]
+CREATING EXEC ON [dbo].[UserCodeValidation_SelectOne] TO public
+CREATING EXEC ON [dbo].[UserCodeValidation_Insert] TO public
+CREATING EXEC ON [dbo].[UserCodeValidation_Delete] TO public
+CREATING [dbo].[SystemConfiguration_Insert]
+CREATING [dbo].[SystemConfiguration_Update]
+CREATING [dbo].[SystemConfiguration_Get]
+CREATING [dbo].[SystemConfiguration_GetNewerThan]
+CREATING [dbo].[AuditLog_UpdateSystemConfiguration]
+CREATING [dbo].[ResourceFile_Select]
+CREATING [dbo].[ResourceFile_Delete]
+CREATING [dbo].[ResourceFile_Exists]
+CREATING [dbo].[ResourceFile_SelectByPartner]
+CREATING [dbo].[ResourceFile_UpdateOverride]
+CREATING [dbo].[ResourceFile_GetNewerThan]
+CREATING [dbo].[ResourceFile_GetByPartnerID]
+CREATING [dbo].[ResourceFile_Get]
+CREATING [dbo].[TraceLog_Select]
+CREATING [dbo].[TraceLog_Insert]
+CREATING [dbo].[TraceLog_Update]
+CREATING [dbo].[TraceLog_Delete]
+CREATING [dbo].[TraceLog_PurgeAll]
+CREATING [dbo].[TraceLog_List]
+CREATING [dbo].[TraceLog_MinMaxDate]
+CREATING [dbo].[Security_GetByID]
+CREATING [dbo].[Security_GetByTicker]
+CREATING [dbo].[Security_GetByCUSIP]
+CREATING [dbo].[Security_UpdatePrice]
+CREATING [dbo].[Security_GetListByIDList]
+CREATING [dbo].[Security_GetTickerListByPriceDateTime]
+CREATING [dbo].[Security_GetTickerListByPriceDate]
+CREATING [dbo].[Security_GetListByTickerList]
+CREATING [dbo].[Security_GetListByCUSIPList]
+CREATING [dbo].[Security_GetListByUserInvestAcctHolding]
+CREATING [dbo].[Security_GetAll]
+CREATING [dbo].[Security_GetListByName]
+CREATING [dbo].[Security_GetListByTicker]
+CREATING [dbo].[Security_GetListByCUSIP]
+CREATING [dbo].[Security_DeleteMarkedForRemoval]
+CREATING [dbo].[Security_Refresh]
+CREATING [dbo].[Security_GetListByUserSecurityOverride]
+CREATING [dbo].[Security_GetOutOfDateSummary]
+CREATING [dbo].[Security_GetUsersWithMarkedSecurities]
+CREATING [dbo].[Security_RefreshData]
+CREATING [dbo].[SecurityRefresh_Clear]
+CREATING [dbo].[SecurityRefresh_GetByID]
+CREATING [dbo].[SecurityRefresh_GetSchema]
+CREATING [dbo].[SecurityRefresh_GetListByIDList]
+CREATING [dbo].[SecurityAlias_Clear]
+CREATING [dbo].[SecurityAlias_GetSchema]
+CREATING [dbo].[SecurityOverride_GetByUserIDWithSecrityID]
+CREATING [dbo].[SecurityOverride_GetByUserID]
+CREATING [dbo].[SecurityOverride_GetBySecurityID]
+CREATING [dbo].[SecurityOverride_GetByAccountHoldingID]
+CREATING [dbo].[SecurityOverride_DeleteByAccountHoldingIDs]
+CREATING [dbo].[SecurityOverride_GetByUserHoldings]
+CREATING [dbo].[SecurityOverride_Select]
+CREATING [dbo].[SecurityOverride_Insert]
+CREATING [dbo].[SecurityOverride_Update]
+CREATING [dbo].[SecurityOverride_Delete]
+CREATING [dbo].[Partner_Select]
+CREATING [dbo].[Partner_Insert]
+CREATING [dbo].[Partner_Update]
+CREATING [dbo].[Partner_Delete]
+CREATING [dbo].[Partner_CreateRoot]
+CREATING [dbo].[Partner_Create]
+CREATING [dbo].[Partner_Get]
+CREATING [dbo].[Partner_GetPartnerList]
+CREATING [dbo].[Partner_Move]
+CREATING [dbo].[Partner_UpdateDescription]
+CREATING [dbo].[Partner_EffectiveBillingContractID]
+CREATING [dbo].[Partner_DeleteAfterMovingUsers]
+CREATING [dbo].[Partner_GetLicenseOverrides]
+CREATING [dbo].[Partner_UpdateSubscriptionCounts]
+CREATING [dbo].[User_Select]
+CREATING [dbo].[User_Insert]
+CREATING [dbo].[User_Update]
+CREATING [dbo].[User_DeleteReferences]
+CREATING [dbo].[User_RecoverableDelete]
+CREATING [dbo].[User_Delete]
+CREATING [dbo].[User_Undelete]
+CREATING [dbo].[User_GetIDListByPartnerID]
+CREATING [dbo].[User_GetProducerLicenseInfo]
+CREATING [dbo].[User_ChangePartner]
+CREATING [dbo].[User_GetOldUsers]
+CREATING [dbo].[User_FindByUserID]
+CREATING [dbo].[User_FindByUserIDs]
+CREATING [dbo].[User_FindByUserRole]
+CREATING [dbo].[User_FindActiveByUserRole]
+CREATING [dbo].[User_FindExpiredUsers]
+CREATING [dbo].[User_FindOwnedUsers]
+CREATING [dbo].[User_FindAddlLogons]
+CREATING [dbo].[User_FindByOfficeID]
+CREATING [dbo].[User_FindByBillingContractID]
+CREATING [dbo].[User_FindBillingUserID]
+CREATING [dbo].[User_FindByUserName]
+CREATING [dbo].[User_GetNumUsersByOfficeID]
+CREATING [dbo].[GenerateBillingReport]
+CREATING [dbo].[sp_CheckGuardianEntitlements]
+CREATING [dbo].[sp_CheckGuardianEntitlementsReport]
+CREATING [dbo].[User_BillingUnitFilter]
+CREATING [dbo].[User_UpdateBillingUnitContract]
+CREATING [dbo].[User_UpdateOfficeContract]
+CREATING [dbo].[User_GetPASEntitlements]
+CREATING [dbo].[User_GetSubscriptionCounts]
+CREATING [dbo].[User_GetAgencyList]
+CREATING [dbo].[User_GetAssistantList]
+CREATING [dbo].[User_GetAssistantsPerAgency]
+CREATING [dbo].[AgencyName_SelectOne]
+CREATING [dbo].[AgencyName_GetAll]
+CREATING [dbo].[User_GetAdvisorExtract]
+CREATING [dbo].[User_GetMonthlyReport]
+CREATING [dbo].[Session_Create]
+CREATING [dbo].[Session_UpdateExpirationDate]
+CREATING [dbo].[Session_Get]
+CREATING [dbo].[Session_Delete]
+CREATING [dbo].[Session_GetSingleSignOnSession]
+CREATING [dbo].[Session_GetSingleSignOnKey]
+CREATING [dbo].[Session_Expire]
+CREATING [dbo].[UserAccount_Select]
+CREATING [dbo].[UserAccount_Insert]
+CREATING [dbo].[UserAccount_Update]
+CREATING [dbo].[UserAccount_Delete]
+CREATING [dbo].[UserAccount_Get]
+CREATING [dbo].[UserAccount_GetByName]
+CREATING [dbo].[UserAccount_GetByLastName]
+CREATING [dbo].[UserAccount_UpdateBadLogons]
+CREATING [dbo].[UserAccount_UpdateLastLogon]
+CREATING [dbo].[UserAccount_GetUniqueUserName]
+CREATING [dbo].[UserAccount_UserNameExists]
+CREATING [dbo].[UserAccount_GetAccountsForPartner]
+CREATING [dbo].[UserAccount_MISReport]
+CREATING [dbo].[UserAccount_ProducerUsageReport]
+CREATING [dbo].[UserAccount_ProducerUsageDetailReport]
+CREATING [dbo].[UserAccount_ClientUsageReport]
+CREATING [dbo].[UserAccount_ClientMailingReport]
+CREATING [dbo].[UserAccount_ClientSiteLogonListReport]
+CREATING [dbo].[UserAccount_GetAddlLogonList]
+CREATING [dbo].[UserAccount_AggregationReport]
+CREATING [dbo].[UserAccount_ConvertToPrimary]
+CREATING [dbo].[UserAccount_Map]
+CREATING [dbo].[UserAccount_ClientSiteUsageReport]
+CREATING [dbo].[UserAccount_BillingUnitUsageReport]
+CREATING [dbo].[UserAccessRight_Select]
+CREATING [dbo].[UserAccessRight_Insert]
+CREATING [dbo].[UserAccessRight_Update]
+CREATING [dbo].[UserAccessRight_Delete]
+CREATING [dbo].[UserAccessRight_GetOwnerAccessorID]
+CREATING [dbo].[UserAccessRight_GetRights]
+CREATING [dbo].[UserAccessRight_SelectOne]
+CREATING [dbo].[UserAccessRight_ChangeOwnerRights]
+CREATING [dbo].[UserAccessRight_GetSharingRules]
+CREATING [dbo].[UserAccessRight_GetSharingRulesAlliance]
+CREATING [dbo].[UserAccessRight_GetSharingRulesClient]
+CREATING [dbo].[UserAccessRight_RemoveIndividualShareRules]
+CREATING [dbo].[UserAccessRight_IsDelegate]
+CREATING [dbo].[UserAccessRight_OwnedClients]
+CREATING [dbo].[Search_Users]
+CREATING [dbo].[SecurityLog_Purge]
+CREATING [dbo].[SecurityLog_Insert]
+CREATING [dbo].[SecurityLog_InsertBadLogon]
+CREATING [dbo].[SecurityLog_List]
+CREATING [dbo].[UserActionHistory_Add]
+CREATING [dbo].[UserActionHistory_Purge]
+CREATING [dbo].[UserActionHistory_List]
+CREATING [dbo].[UserPreference_Select]
+CREATING [dbo].[UserPreference_Insert]
+CREATING [dbo].[UserPreference_Update]
+CREATING [dbo].[UserPreference_Delete]
+CREATING [dbo].[UserPreference_GetPreferences]
+CREATING [dbo].[UserPreference_GetPreference]
+CREATING [dbo].[UserPreference_GetPreferenceByDataType]
+CREATING [dbo].[UserPreference_SetOwnedAndDelegatedPreference]
+CREATING [dbo].[UserPreference_SetOwnedAlliancePartnerPreference]
+CREATING [dbo].[UserBlob_Insert]
+CREATING [dbo].[UserBlob_Delete]
+CREATING [dbo].[UserBlob_Update]
+CREATING [dbo].[UserBlob_Select]
+CREATING [dbo].[UserBlob_GetByUserID]
+CREATING [dbo].[UserBlob_CopyVaultAccessToAllAlliancePartnersForClient]
+CREATING [dbo].[UserBlob_SetOwnedAndDelegatedBlob]
+CREATING [dbo].[UserExternalID_Create]
+CREATING [dbo].[UserExternalID_Delete]
+CREATING [dbo].[UserExternalID_FindByGlobalUserID]
+CREATING [dbo].[UserExternalID_FindByDomainID]
+CREATING [dbo].[UserExternalID_FindByDomainAndAdvisor]
+CREATING [dbo].[UserExternalID_FindByUserIDRole]
+CREATING [dbo].[UserExternalID_GetExternalIDs]
+CREATING [dbo].[UserExternalID_GetExternalID]
+CREATING [dbo].[UserExternalID_Select]
+CREATING [dbo].[AccountHolding_Select]
+CREATING [dbo].[AccountHolding_Insert]
+CREATING [dbo].[AccountHolding_Update]
+CREATING [dbo].[AccountHolding_Delete]
+CREATING [dbo].[AccountHolding_GetByFactID]
+CREATING [dbo].[AccountHolding_GetCountByFactID]
+CREATING [dbo].[AccountHolding_GetByUserID]
+CREATING [dbo].[AccountHolding_GetTopHoldings]
+CREATING [dbo].[AccountHolding_GetTopSecurities]
+CREATING [dbo].[AccountHolding_RefreshManualHoldings]
+CREATING [dbo].[AccountHolding_GetByFactIDList]
+CREATING [dbo].[AccountHolding_GetByCanbeOverriden]
+CREATING [dbo].[AccountHistory_Select]
+CREATING [dbo].[AccountHistory_Insert]
+CREATING [dbo].[AccountHistory_Update]
+CREATING [dbo].[AccountHistory_Delete]
+CREATING [dbo].[AccountHistory_GetByAsOfDate]
+CREATING [dbo].[AccountHistory_GetListByAsOfDate]
+CREATING [dbo].[AccountHistory_GetByUserID]
+CREATING [dbo].[AccountHistory_UpdateBatch]
+CREATING [dbo].[AccountHistory_GetRecordsToPurge]
+CREATING [dbo].[InvestmentGroup_Select]
+CREATING [dbo].[InvestmentGroup_Insert]
+CREATING [dbo].[InvestmentGroup_Update]
+CREATING [dbo].[InvestmentGroup_Delete]
+CREATING [dbo].[InvestmentGroup_GetByUserID]
+CREATING [dbo].[InvestmentGroup_Find]
+CREATING [dbo].[Scenario_Select]
+CREATING [dbo].[Scenario_Insert]
+CREATING [dbo].[Scenario_Update]
+CREATING [dbo].[Scenario_Delete]
+CREATING [dbo].[Scenario_GetByUserID]
+CREATING [dbo].[Scenario_GetByScenarioType]
+CREATING [dbo].[Scenario_GetFactChanges_Recursive]
+CREATING [dbo].[Scenario_GetFactChanges]
+CREATING [dbo].[Scenario_GetFactChangesByRootFactID]
+CREATING [dbo].[Scenario_GetFactChangesByType]
+CREATING [dbo].[Scenario_GetFactChangesByTypeSortByName]
+CREATING [dbo].[Scenario_DeleteDerived]
+CREATING [dbo].[Scenario_GetFactSummaries]
+CREATING [dbo].[Scenario_GetFactSummaries_Recursive]
+CREATING [dbo].[Scenario_GetFactSummariesByType]
+CREATING [dbo].[Scenario_GetFactSummariesByTypeExact]
+CREATING [dbo].[Scenario_IncludeFactChanges]
+CREATING [dbo].[Scenario_GetSubAccounts]
+CREATING [dbo].[FactChange_Insert]
+CREATING [dbo].[FactChange_Update]
+CREATING [dbo].[FactChange_Delete]
+CREATING [dbo].[FactChange_Select]
+CREATING [dbo].[FactChange_GetAncestors]
+CREATING [dbo].[FactChange_GetRelated]
+CREATING [dbo].[FactChange_GetByUserID]
+CREATING [dbo].[FactChange_GetByUserIDFactType]
+CREATING [dbo].[FactChange_PrepareRollupAccount]
+CREATING [dbo].[FactChange_UpdateFact]
+CREATING [dbo].[FactChange_GetFactSummariesByUserID]
+CREATING [dbo].[FactChange_GetByFactIDList]
+CREATING [dbo].[FactChange_GetFactSummariesByFactIDList]
+CREATING [dbo].[FactChange_GetSubAccountSummariesByFactIDList]
+CREATING [dbo].[FactChange_GetAdditionalAccountSummaryInfoValues]
+CREATING [dbo].[User_UpdateAllAssetsGrowthRateToDefaultGrowthRate]
+CREATING [dbo].[FactChange_CountIndividualModelRatesToReset]
+CREATING [dbo].[FactChange_MarkIndividualModelRatesToReset]
+CREATING [dbo].[FactChange_GetNextChunkOfIndividualModelRateFactIDsToReset]
+CREATING [dbo].[User_GetModelPortfolioUsersByType]
+CREATING [dbo].[FactChange_GetEffectiveModelRateFactID]
+CREATING [dbo].[FactChange_GetEffectiveModelVersion]
+CREATING [dbo].[FactChange_GetEffectiveModelRateFact]
+CREATING [dbo].[FactChange_GetAlternativeModelRateFact]
+CREATING [dbo].[FactChange_GetMyModelRateFact]
+CREATING [dbo].[FactChange_GetByUnderManagement]
+CREATING [dbo].[FactChange_GetLinkedAndManagementOpportunityStatus]
+CREATING [dbo].[Contact_Select]
+CREATING [dbo].[Contact_Insert]
+CREATING [dbo].[Contact_Update]
+CREATING [dbo].[Contact_Delete]
+CREATING [dbo].[Advisor_Select]
+CREATING [dbo].[Advisor_Insert]
+CREATING [dbo].[Advisor_Update]
+CREATING [dbo].[Advisor_Delete]
+CREATING [dbo].[Advisor_GetByUserID]
+CREATING [dbo].[BrokerDealer_Select]
+CREATING [dbo].[BrokerDealer_Insert]
+CREATING [dbo].[BrokerDealer_Update]
+CREATING [dbo].[BrokerDealer_Delete]
+CREATING [dbo].[BrokerDealer_SelectOne]
+CREATING [dbo].[ContactRecent_UpdateOverride]
+CREATING [dbo].[ContactRecent_Delete]
+CREATING [dbo].[FileSystemObject_Insert]
+CREATING [dbo].[FileSystemObject_Update]
+CREATING [dbo].[FileSystemObject_Delete]
+CREATING [dbo].[FileSystemObject_Rename]
+CREATING [dbo].[FileSystemObject_SelectOneByUserIDPathName]
+CREATING [dbo].[FileSystemObject_SelectOneByFileSystemObjectID]
+CREATING [dbo].[FileSystemObject_Find]
+CREATING [dbo].[FileSystemObject_FindAll]
+CREATING [dbo].[FileSystemObject_FindAllFilesInPath]
+CREATING [dbo].[FileSystemObject_DeleteFilesInFolder]
+CREATING [dbo].[FileSystemObject_UpdateSummary]
+CREATING [dbo].[FileSystemObject_UpdateSummaryByPath]
+CREATING [dbo].[FileSystemObject_RepairSummaries]
+CREATING [dbo].[FileSystemObject_GetFilesByFactID]
+CREATING [dbo].[FileSystemObject_GetFilesByFactIDAndSubAccounts]
+CREATING [dbo].[VaultUsage_Select]
+CREATING [dbo].[VaultAllocation_Select]
+CREATING [dbo].[VaultAllocation_Insert]
+CREATING [dbo].[VaultAllocation_Update]
+CREATING [dbo].[VaultAllocation_Delete]
+CREATING [dbo].[VaultAllocation_SelectOne]
+CREATING [dbo].[VaultAllocationDisplay_SelectOne]
+CREATING [dbo].[VaultAllocationDisplay_Search]
+CREATING [dbo].[VaultAllocation_SetOwnedAndDelegatedAllocation]
+CREATING [dbo].[VaultUsageDisplay_SelectOne]
+CREATING [dbo].[AlertOption_Select]
+CREATING [dbo].[AlertOption_Insert]
+CREATING [dbo].[AlertOption_Update]
+CREATING [dbo].[AlertOption_Delete]
+CREATING [dbo].[AlertOption_GetByUserID]
+CREATING [dbo].[AlertOption_GetByUserIDAlertRuleIDList]
+CREATING [dbo].[AlertOptionRecipient_Insert]
+CREATING [dbo].[AlertOptionRecipient_GetByAlertOptionID]
+CREATING [dbo].[AlertOptionRecipient_SelectOneByAlertOptionIDUserID]
+CREATING [dbo].[AlertOptionRecipient_SelectOneByAlertOptionIDEmail]
+CREATING [dbo].[AlertOptionRecipient_DeleteByAlertOptionIDUserID]
+CREATING [dbo].[AlertOptionRecipient_DeleteByAlertOptionIDEmail]
+CREATING [dbo].[AlertOptionRecipient_DeleteAll]
+CREATING [dbo].[AlertNotification_Insert]
+CREATING [dbo].[AlertNotification_Update]
+CREATING [dbo].[AlertNotification_Delete]
+CREATING [dbo].[AlertNotification_Select]
+CREATING [dbo].[AlertNotification_GetByUserID]
+CREATING [dbo].[AlertNotification_SelectNotSentByRecipientUserID]
+CREATING [dbo].[AlertNotification_SelectNotSentByRecipientEmail]
+CREATING [dbo].[AlertNotification_GetClientsByUserID]
+CREATING [dbo].[AlertNotification_GetSharedClientsByUserID]
+CREATING [dbo].[AlertNotification_GetAllClientsByUserID]
+CREATING [dbo].[AlertNotification_GetWithClientsByUserID]
+CREATING [dbo].[AlertNotification_GetClientNotifications]
+CREATING [dbo].[AlertNotification_GetAlertAndTaskSummary]
+CREATING [dbo].[AlertNotification_DeleteByExpiration]
+CREATING [dbo].[AlertNotification_DeleteByAlertOptionID]
+CREATING [dbo].[AlertNotification_DeleteByUserID]
+CREATING [dbo].[AlertNotification_SetMessageReadByAlertOptionID]
+CREATING [dbo].[AlertNotification_SetMessageReadByUserID]
+CREATING [dbo].[AlertNotificationRecipient_Insert]
+CREATING [dbo].[AlertNotificationRecipient_MarkAsSentByAlertNotificationIDUserID]
+CREATING [dbo].[AlertNotificationRecipient_MarkAsSentByAlertNotificationIDEmail]
+CREATING [dbo].[AlertNotificationRecipient_SelectNonUsers]
+CREATING [dbo].[AlertNotificationRecipient_SelectByAlertNotificationID]
+CREATING [dbo].[QuestionAnswer_Select]
+CREATING [dbo].[QuestionAnswer_Insert]
+CREATING [dbo].[QuestionAnswer_Update]
+CREATING [dbo].[QuestionAnswer_Delete]
+CREATING [dbo].[AnalysisGrid_Select]
+CREATING [dbo].[AnalysisGrid_Insert]
+CREATING [dbo].[AnalysisGrid_Update]
+CREATING [dbo].[AnalysisGrid_Delete]
+CREATING [dbo].[AnalysisGrid_SelectOne]
+CREATING [dbo].[EducationExpenses_GetByID]
+CREATING [dbo].[EducationExpenses_GetByStateAndName]
+CREATING [dbo].[EducationExpenses_GetAllByState]
+CREATING [dbo].[EducationExpenses_GetAll]
+CREATING [dbo].[Presentation_Select]
+CREATING [dbo].[Presentation_Insert]
+CREATING [dbo].[Presentation_Update]
+CREATING [dbo].[Presentation_Delete]
+CREATING [dbo].[Presentation_GetPresentationSummaries]
+CREATING [dbo].[Presentation_GetPresentationSummariesByGroup]
+CREATING [dbo].[Presentation_GetPresentationMetaTemplates]
+CREATING [dbo].[Presentation_GetByUserID]
+CREATING [dbo].[Presentation_GetByUserIDAndGroup]
+CREATING [dbo].[Presentation_SelectOne]
+CREATING [dbo].[Presentation_SelectOneByClientAndName]
+CREATING [dbo].[DataUpgradeHistory_Insert]
+CREATING [dbo].[AwardsManager_Select]
+CREATING [dbo].[AwardsManager_Update]
+CREATING [dbo].[AwardsManager_Delete]
+CREATING [dbo].[AwardsManager_Insert]
+CREATING [dbo].[AwardsManager_GetUsage]
+CREATING [dbo].[AwardsManager_SelectOne]
+CREATING [dbo].[AwardsManager_ValidateAndResolveSso]
+CREATING [dbo].[UserAgreement_Select]
+CREATING [dbo].[UserAgreement_Delete]
+CREATING [dbo].[UserAgreement_SelectAll]
+CREATING [dbo].[UserAgreement_UpdateOverride]
+CREATING [dbo].[Note_Select]
+CREATING [dbo].[Note_Insert]
+CREATING [dbo].[Note_Update]
+CREATING [dbo].[Note_Delete]
+CREATING [dbo].[Note_SelectByClient]
+CREATING [dbo].[Note_SelectByFact]
+CREATING [dbo].[Task_Insert]
+CREATING [dbo].[Task_Update]
+CREATING [dbo].[Task_Delete]
+CREATING [dbo].[Task_Select]
+CREATING [dbo].[Task_SelectByClient]
+CREATING [dbo].[Task_SelectByClientCompleted]
+CREATING [dbo].[Task_SelectByAssignedTo]
+CREATING [dbo].[Task_SelectByAssignedToCompleted]
+CREATING [dbo].[Task_SelectByRequestedBy]
+CREATING [dbo].[Task_SelectByRequestedByCompleted]
+CREATING [dbo].[Task_SelectOpenTasksPerClientByAssignedTo]
+CREATING [dbo].[Task_SelectOpenTasksByAssignedTo]
+CREATING [dbo].[Checklist_Select]
+CREATING [dbo].[Checklist_Insert]
+CREATING [dbo].[Checklist_Update]
+CREATING [dbo].[Checklist_Delete]
+CREATING [dbo].[PersonalFinancialBiography_Select]
+CREATING [dbo].[PersonalFinancialBiography_Insert]
+CREATING [dbo].[PersonalFinancialBiography_Update]
+CREATING [dbo].[PersonalFinancialBiography_Delete]
+CREATING [dbo].[PersonalFinancialBiography_SelectByClient]
+CREATING [dbo].[PortfolioAnalysis_Select]
+CREATING [dbo].[PortfolioAnalysis_Insert]
+CREATING [dbo].[PortfolioAnalysis_Update]
+CREATING [dbo].[PortfolioAnalysis_Delete]
+CREATING [dbo].[PortfolioAnalysis_SelectByUserID]
+CREATING [dbo].[PresentationReview_Select]
+CREATING [dbo].[PresentationReview_Insert]
+CREATING [dbo].[PresentationReview_Update]
+CREATING [dbo].[PresentationReview_Delete]
+CREATING [dbo].[PresentationReview_SelectOne]
+CREATING [dbo].[PresentationReview_GetListCompliance]
+CREATING [dbo].[PresentationReview_SelectPendingByVaultID]
+CREATING [dbo].[PresentationReview_GetListReviewers]
+CREATING [dbo].[Queue_Reports_Enqueue]
+CREATING [dbo].[Queue_Reports_Dequeue]
+CREATING [dbo].[Queue_Reports_Clear]
+CREATING [dbo].[Queue_Reports_Peek]
+CREATING [dbo].[Queue_Reports_PeekAll]
+CREATING [dbo].[Queue_Reports_GetNumMessages]
+CREATING [dbo].[Queue_Reports_GetStatusByUserID]
+CREATING [dbo].[Queue_Reports_GetStatusByUserIDAndMessageType]
+CREATING [dbo].[Queue_Reports_Cancel]
+CREATING [dbo].[Queue_Reports_SetState]
+CREATING [dbo].[Queue_Reports_ClearState]
+CREATING [dbo].[Queue_Test_Enqueue]
+CREATING [dbo].[Queue_Test_Dequeue]
+CREATING [dbo].[Queue_Test_Clear]
+CREATING [dbo].[Queue_Test_Peek]
+CREATING [dbo].[Queue_Test_PeekAll]
+CREATING [dbo].[Queue_Test_GetNumMessages]
+CREATING [dbo].[Queue_Test_GetStatusByUserID]
+CREATING [dbo].[Queue_Test_GetStatusByUserIDAndMessageType]
+CREATING [dbo].[Queue_Test_Cancel]
+CREATING [dbo].[Queue_Test_SetState]
+CREATING [dbo].[Queue_Test_ClearState]
+CREATING [dbo].[NetWorthHistory_Select]
+CREATING [dbo].[NetWorthHistory_Insert]
+CREATING [dbo].[NetWorthHistory_Update]
+CREATING [dbo].[NetWorthHistory_Delete]
+CREATING [dbo].[NetWorthHistory_GetByUserID]
+CREATING [dbo].[NetWorthHistory_UpdateOverride]
+CREATING [dbo].[NetWorthHistory_GetLatestByUserID]
+CREATING [dbo].[NetWorthHistory_ClientImportUpgrade]
+CREATING [dbo].[Template_SelectOne]
+CREATING [dbo].[Template_SelectOneByClientUserID]
+CREATING [dbo].[Template_SelectByUserID]
+CREATING [dbo].[Template_Insert]
+CREATING [dbo].[Template_Update]
+CREATING [dbo].[Template_Delete]
+CREATING [dbo].[Template_GetNames]
+CREATING [dbo].[Template_GetTemplateList]
+CREATING [dbo].[MajorAccountType_FindByFactType]
+CREATING [dbo].[MajorAccountType_FindByMajorAccountType]
+CREATING [dbo].[MajorAccountType_SelectAll]
+CREATING [dbo].[ClientAccessApproval_Insert]
+CREATING [dbo].[ClientAccessApproval_Update]
+CREATING [dbo].[ClientAccessApproval_Select]
+CREATING [dbo].[ClientAccessApproval_GetClientApprovals]
+CREATING [dbo].[ClientAccessApproval_CountClientApprovals]
+CREATING [dbo].[ClientAccessApproval_Delete]
+CREATING [dbo].[ClientAccessApproval_RemoveApprovalsForInaccessibleClients]
+CREATING [dbo].[FactChangeApproval_Insert]
+CREATING [dbo].[FactChangeApproval_Update]
+CREATING [dbo].[FactChangeApproval_Delete]
+CREATING [dbo].[FactChangeApproval_MarkDirty]
+CREATING [dbo].[FactChangeApproval_MarkParentDirty]
+CREATING [dbo].[FactChangeApproval_Approve]
+CREATING [dbo].[FactChangeApproval_Select]
+CREATING [dbo].[FactChangeApproval_SelectByUserID]
+CREATING [dbo].[FactChangeApproval_ApproveAllForUser]
+CREATING [dbo].[FactChangeApproval_MarkRejectionsProcessedForUser]
+CREATING [dbo].[FactChangeApproval_CountUnprocessedRejectionsByUserID]
+CREATING [dbo].[Checkout_Checkout]
+CREATING [dbo].[Checkout_Checkin]
+CREATING [dbo].[Checkout_Undo]
+CREATING [dbo].[Checkout_GetNumberOfCheckoutsForAgent]
+CREATING [dbo].[Checkout_IsCheckedOut]
+CREATING [dbo].[Checkout_GetCheckedOutClients]
+CREATING [dbo].[Checkout_CheckedOutBy]
+CREATING [dbo].[Checkout_FindExpiredCheckouts]
+CREATING [dbo].[Checkout_Select]
+CREATING [dbo].[Checkout_CheckoutList]
+CREATING [dbo].[OfflineHistory_UpdateCheckout]
+CREATING [dbo].[OfflineHistory_UpdateCheckin]
+CREATING [dbo].[OfflineHistory_UpdateInitialLogon]
+CREATING [dbo].[OfflineHistory_OfflineUsageReport]
+CREATING [dbo].[TaskHistory_Purge]
+CREATING [dbo].[TaskHistory_Select]
+CREATING [dbo].[TaskHistory_Insert]
+CREATING [dbo].[TaskHistory_Update]
+CREATING [dbo].[TaskHistory_Delete]
+CREATING [dbo].[ClientHistory_Select]
+CREATING [dbo].[ClientHistory_Insert]
+CREATING [dbo].[ClientHistory_Update]
+CREATING [dbo].[ClientHistory_Delete]
+CREATING [dbo].[ClientHistory_UpdateSubTypeMapping]
+CREATING [dbo].[Search_ClientHistory]
+CREATING [dbo].[InvestmentPolicy_Select]
+CREATING [dbo].[InvestmentPolicy_Insert]
+CREATING [dbo].[InvestmentPolicy_Update]
+CREATING [dbo].[InvestmentPolicy_Delete]
+CREATING [dbo].[Opportunity_Insert]
+CREATING [dbo].[Opportunity_Select]
+CREATING [dbo].[Opportunity_Update]
+CREATING [dbo].[Opportunity_Delete]
+CREATING [dbo].[Opportunity_Truncate]
+CREATING [dbo].[Opportunity_GetTimestamp]
+CREATING [dbo].[Opportunity_GetByAdvisorID]
+CREATING [dbo].[Opportunity_GetByClientID]
+CREATING [dbo].[Opportunity_GetByNeedType]
+CREATING [dbo].[Opportunity_GetTotalNeedForClient]
+CREATING [dbo].[Opportunity_GetCountForClient]
+CREATING [dbo].[Opportunity_GetCountForAdvisor]
+CREATING [dbo].[Opportunity_GetNeedsSummaryForClient]
+CREATING [dbo].[Opportunity_GetClientRank]
+CREATING [dbo].[Opportunity_GetTotalAssetsUnderManagementByClient]
+CREATING [dbo].[Opportunity_GetTotalAssetsUnderManagementByAdvisor]
+CREATING [dbo].[Opportunity_GetTotalAssetsByClient]
+CREATING [dbo].[Opportunity_GetTotalAssetsByAdvisor]
+CREATING [dbo].[UserGroup_Select]
+CREATING [dbo].[UserGroup_Insert]
+CREATING [dbo].[UserGroup_Update]
+CREATING [dbo].[UserGroup_Delete]
+CREATING [dbo].[UserGroup_GetGroupListByOwnerID]
+CREATING [dbo].[UserGroup_GetMembershipListForUser]
+CREATING [dbo].[UserGroupMembership_Delete]
+CREATING [dbo].[UserGroupMembership_AddToGroup]
+CREATING [dbo].[UserGroupMembership_RemoveFromGroup]
+CREATING [dbo].[UserGroupMembership_IsGroupMember]
+CREATING [dbo].[UserOffice_Get]
+CREATING [dbo].[UserOffice_Insert]
+CREATING [dbo].[UserOffice_Delete]
+CREATING [dbo].[PlayList_Update]
+CREATING [dbo].[PlayList_SelectOne]
+CREATING [dbo].[PlayList_Insert]
+CREATING [dbo].[PlayList_GetByUserID]
+CREATING [dbo].[PlayList_GetByRoomType]
+CREATING [dbo].[PlayList_GetAllByRoomType]
+CREATING [dbo].[PlayList_Delete]
+CREATING [dbo].[PlayList_GetAllExpertTemplates]
+CREATING [dbo].[PlayList_GetDefault]
+CREATING [dbo].[ReferredContact_Select]
+CREATING [dbo].[ReferredContact_Insert]
+CREATING [dbo].[ReferredContact_Update]
+CREATING [dbo].[ReferredContact_Delete]
+CREATING [dbo].[Remapper_GetUsersByOffice]
+CREATING [dbo].[Remapper_UpdateAssetAllocationAlert]
+CREATING [dbo].[Remapper_GetAssetAllocationAlerts]
+CREATING [dbo].[Remapper_UpdateSecurityOverrides]
+CREATING [dbo].[Remapper_ResetRiskTolerance]
+CREATING [dbo].[AgencyDelegate_SelectOne]
+CREATING [dbo].[AgencyDelegate_Insert]
+CREATING [dbo].[AgencyDelegate_Delete]
+CREATING [dbo].[AgencyDelegate_GetByUserID]
+CREATING [dbo].[AgencyDelegate_GetByDelegateID]
+CREATING [dbo].[AgencyDirector_SelectOne]
+CREATING [dbo].[AgencyDirector_Insert]
+CREATING [dbo].[AgencyDirector_Delete]
+CREATING [dbo].[AgencyDirector_GetByUserID]
+CREATING [dbo].[AgencyDirector_GetByDirectorID]
+CREATING [dbo].[AgencyOfficeLink_SelectOne]
+CREATING [dbo].[AgencyOfficeLink_Insert]
+CREATING [dbo].[AgencyOfficeLink_Delete]
+CREATING [dbo].[AgencyOfficeLink_GetByUserID]
+CREATING [dbo].[Agency_GetAgentListSummary]
+CREATING [dbo].[Agency_GetGroupListSummary]
+CREATING [dbo].[Agency_GetAgentListSummarySingleGroup]
+CREATING [dbo].[Agency_GetAvailableManagementTeamMembers]
+CREATING [dbo].[Agency_GetClientStickinessList]
+CREATING [dbo].[Agency_GetFinancialRepInfo]
+CREATING [dbo].[Agency_GetActionItems]
+CREATING [dbo].[Agency_GetActionItemsForSpecificAgent]
+CREATING [dbo].[Agency_GetNumberOfSuspendedViewableAgents]
+CREATING [dbo].[AgencyGroup_Update]
+CREATING [dbo].[AgencyGroup_SelectOne]
+CREATING [dbo].[AgencyGroup_Insert]
+CREATING [dbo].[AgencyGroup_Delete]
+CREATING [dbo].[AgencyGroup_GetByAgencyHead]
+CREATING [dbo].[AgencyGroup_GetByGroupCreator]
+CREATING [dbo].[AgencyGroupMember_SelectOne]
+CREATING [dbo].[AgencyGroupMember_Insert]
+CREATING [dbo].[AgencyGroupMember_Delete]
+CREATING [dbo].[AgencyGroupMember_DeleteAll]
+CREATING [dbo].[AgencyGroupMember_GetByGroupID]
+CREATING [dbo].[AgencyGroupMember_GetByUserID]
+CREATING [dbo].[AgencyOfficeHistory_Insert]
+CREATING [dbo].[AgencyOfficeHistory_GetByPartnerID]
+CREATING [dbo].[AgencyOfficeHistory_GetByPartnerTotals]
+CREATING [dbo].[AgencyOfficeHistory_GetByUser]
+CREATING [dbo].[AgencyGroupHistory_Insert]
+CREATING [dbo].[AgencyGroupHistory_GetByGroupID]
+CREATING [dbo].[AgencyGroupHistory_GetByGroup]
+CREATING [dbo].[AgencyGroupHistory_GetByGroupTotals]
+CREATING [dbo].[AgencyAgentHistory_Insert]
+CREATING [dbo].[AgencyAgentHistory_GetByUserID]
+CREATING [dbo].[AgencyAgentHistory_GetAgentData]
+CREATING [dbo].[Corporation_Update]
+CREATING [dbo].[Corporation_SelectOne]
+CREATING [dbo].[Corporation_SelectByCorporationID]
+CREATING [dbo].[Corporation_Insert]
+CREATING [dbo].[Corporation_Delete]
+CREATING [dbo].[Corporation_GetByUserID]
+CREATING [dbo].[Corporation_GetForAdmin]
+CREATING [dbo].[CorporationEmployee_Select]
+CREATING [dbo].[CorporationDelegate_Update]
+CREATING [dbo].[CorporationDelegate_SelectOne]
+CREATING [dbo].[CorporationDelegate_SelectByCorporationID]
+CREATING [dbo].[CorporationDelegate_Insert]
+CREATING [dbo].[CorporationDelegate_Delete]
+CREATING [dbo].[CorporationDelegate_UpdateStatus]
+CREATING [dbo].[CorporationDelegate_IsDelegateByID]
+CREATING [dbo].[CorporationDelegate_ListCorporateDelegates]
+CREATING [dbo].[CorporationDelegate_GetPrimaryDelegateID]
+CREATING [dbo].[CorporationDelegate_GetPrimaryDelegatesByUserID]
+CREATING [dbo].[CorporationWorkshop_Update]
+CREATING [dbo].[CorporationWorkshop_Select]
+CREATING [dbo].[CorporationWorkshop_SelectByCorporationID]
+CREATING [dbo].[CorporationWorkshop_SelectOne]
+CREATING [dbo].[CorporationWorkshop_SelectDefault]
+CREATING [dbo].[CorporationWorkshop_SelectOneByWorkshopID]
+CREATING [dbo].[CorporationWorkshop_Insert]
+CREATING [dbo].[CorporationWorkshop_Delete]
+CREATING [dbo].[CorporationWorkshop_GetUsersByWorkshop]
+CREATING [dbo].[CorporationWorkshop_GetWorkshopsByUser]
+CREATING [dbo].[CorporationUserLink_Select]
+CREATING [dbo].[CorporationUserLink_SelectOne]
+CREATING [dbo].[CorporationUserLink_Insert]
+CREATING [dbo].[CorporationUserLink_Delete]
+CREATING [dbo].[CorporationUserWorkshopLink_Update]
+CREATING [dbo].[CorporationUserWorkshopLink_Select]
+CREATING [dbo].[CorporationUserWorkshopLink_SelectOne]
+CREATING [dbo].[CorporationUserWorkshopLink_Insert]
+CREATING [dbo].[CorporationUserWorkshopLink_Delete]
+CREATING [dbo].[CorpEdPermission_ListByAgentID]
+CREATING [dbo].[CorpEdPermission_SelectOne]
+CREATING [dbo].[CorpEdPermission_Insert]
+CREATING [dbo].[CorpEdPermission_Update]
+CREATING [dbo].[CorpEdPermission_AddEdit]
+CREATING [dbo].[CorpEdPermission_Delete]
+CREATING [dbo].[CorporationReferralLink_Select]
+CREATING [dbo].[CorporationReferralLink_SelectOne]
+CREATING [dbo].[CorporationReferralLink_Insert]
+CREATING [dbo].[CorporationReferralLink_Delete]
+CREATING [dbo].[AgencyAgentSnapshot_Clear]
+CREATING [dbo].[AgencyAgentSnapshot_Insert]
+CREATING [dbo].[AgencyAgentSnapshot_GetByUserID]
+CREATING [dbo].[AgencyAgentSnapshot_GetLastDateUpdate]
+CREATING [dbo].[AgencyAgentSnapshot_UpdateAUMAHAInfo]
+CREATING [dbo].[AgencyAgentSnapshot_GetAgentData]
+CREATING [dbo].[AgencyClientStickinessSnapshot_Clear]
+CREATING [dbo].[AgencyClientStickinessSnapshot_Insert]
+CREATING [dbo].[AgencyClientStickinessSnapshot_CalculateStars]
+CREATING [dbo].[AgencyClientStickinessSnapshot_GetByUserID]
+CREATING [dbo].[AgencyClientStickinessSnapshot_GetData]
+CREATING [dbo].[AgencyActionItemsReviewed_Insert]
+CREATING [dbo].[AgencyActionItemsReviewed_Clear]
+CREATING [dbo].[AgencyActionItemsReviewed_SelectOne]
+CREATING [dbo].[AgencyActionItemsReviewed_GetByAgentAndUser]
+CREATING [dbo].[AgencyAgentMessage_Insert]
+CREATING [dbo].[AgencyAgentMessage_Select]
+CREATING [dbo].[AgencyAgentMessage_Update]
+CREATING [dbo].[AgencyAgentMessage_SelectGroup]
+CREATING [dbo].[AgencyAgentMessage_SelectOne]
+CREATING [dbo].[AgencyAgentMessage_SelectOneGroup]
+CREATING [dbo].[AgencyAgentMessage_Delete]
+CREATING [dbo].[AgencyAgentMessage_DeleteViewed]
+CREATING [dbo].[AgencyAgentMessage_MarkAllViewed]
+CREATING [dbo].[AgencyAgentMessage_GetUnviewedCountForUser]
+CREATING [dbo].[AgencyAgentMessage_SendGroupMessage]
+CREATING [dbo].[AgencyGoals_SelectOne]
+CREATING [dbo].[AgencyGoals_Insert]
+CREATING [dbo].[AgencyGoals_Update]
+CREATING [dbo].[AgencyGoals_Delete]
+CREATING [dbo].[AgencyCancelledAgentsToHide_Insert]
+CREATING [dbo].[AgencyCancelledAgentsToHide_SelectOne]
+CREATING [dbo].[AgencyCancelledAgentsToHide_GetByAgentAndUser]
+CREATING [dbo].[AgencyCancelledAgentsToHide_GetByAgent]
+CREATING [dbo].[LbsBusinessData_Select]
+CREATING [dbo].[LbsBusinessData_Insert]
+CREATING [dbo].[LbsBusinessData_Update]
+CREATING [dbo].[LbsBusinessData_Delete]
+CREATING [dbo].[LbsBusinessData_GetByUserID]
+CREATING [dbo].[HistoricalSnapshot_Insert]
+CREATING [dbo].[HistoricalSnapshot_GetByUserID]
+CREATING [dbo].[HistoricalSnapshot_GetByUserIDSumByDomain]
+CREATING [dbo].[HistoricalSnapshot_GetByUserIDSumBySubDomain]
+CREATING [dbo].[HistoricalSnapshot_GetByUserIDDomain]
+CREATING [dbo].[FactLink_Insert]
+CREATING [dbo].[FactLink_Remove]
+CREATING [dbo].[FactLink_RemoveFact1]
+CREATING [dbo].[FactLink_RemoveSingleLink]
+CREATING [dbo].[FactLink_GetByUserID]
+CREATING [dbo].[ClientReferral_Select]
+CREATING [dbo].[ClientReferral_SelectOne]
+CREATING [dbo].[ClientReferral_SelectByCreatedClient]
+CREATING [dbo].[ClientReferral_SelectAllForClient]
+CREATING [dbo].[ClientReferral_SelectAllForAdvisor]
+CREATING [dbo].[ClientReferral_SelectAllAsContact]
+CREATING [dbo].[ClientReferral_SelectAllAsNonClientContact]
+CREATING [dbo].[ClientReferral_Insert]
+CREATING [dbo].[ClientReferral_Update]
+CREATING [dbo].[ClientReferral_Delete]
+CREATING [dbo].[ClientReferral_DeleteAllAdvisorContacts]
+CREATING ALL ON [dbo].[SystemConfiguration_Insert] TO Public
+CREATING ALL ON [dbo].[SystemConfiguration_Update] TO Public
+CREATING ALL ON [dbo].[SystemConfiguration_Get] TO Public
+CREATING ALL ON [dbo].[SystemConfiguration_GetNewerThan] TO Public
+CREATING ALL ON [dbo].[AuditLog_UpdateSystemConfiguration] TO Public
+CREATING ALL ON [dbo].[ResourceFile_Select] TO Public
+CREATING ALL ON [dbo].[ResourceFile_Delete] TO Public
+CREATING ALL ON [dbo].[ResourceFile_Exists] TO Public
+CREATING ALL ON [dbo].[ResourceFile_SelectByPartner] TO Public
+CREATING ALL ON [dbo].[ResourceFile_UpdateOverride] TO Public
+CREATING ALL ON [dbo].[ResourceFile_GetNewerThan] TO Public
+CREATING ALL ON [dbo].[ResourceFile_GetByPartnerID] TO Public
+CREATING ALL ON [dbo].[ResourceFile_Get] TO Public
+CREATING ALL ON [dbo].[TraceLog_Select] TO Public
+CREATING ALL ON [dbo].[TraceLog_Insert] TO Public
+CREATING ALL ON [dbo].[TraceLog_Update] TO Public
+CREATING ALL ON [dbo].[TraceLog_Delete] TO Public
+CREATING ALL ON [dbo].[TraceLog_PurgeAll] TO Public
+CREATING ALL ON [dbo].[TraceLog_List] TO Public
+CREATING ALL ON [dbo].[TraceLog_MinMaxDate] TO Public
+CREATING ALL ON [dbo].[Security_GetByID] TO Public
+CREATING ALL ON [dbo].[Security_GetByTicker] TO Public
+CREATING ALL ON [dbo].[Security_GetByCUSIP] TO Public
+CREATING ALL ON [dbo].[Security_UpdatePrice] TO Public
+CREATING ALL ON [dbo].[Security_GetListByIDList] TO Public
+CREATING ALL ON [dbo].[Security_GetTickerListByPriceDateTime] TO Public
+CREATING ALL ON [dbo].[Security_GetTickerListByPriceDate] TO Public
+CREATING ALL ON [dbo].[Security_GetListByTickerList] TO Public
+CREATING ALL ON [dbo].[Security_GetListByCUSIPList] TO Public
+CREATING ALL ON [dbo].[Security_GetListByUserInvestAcctHolding] TO Public
+CREATING ALL ON [dbo].[Security_GetAll] TO Public
+CREATING ALL ON [dbo].[Security_GetListByName] TO Public
+CREATING ALL ON [dbo].[Security_GetListByTicker] TO Public
+CREATING ALL ON [dbo].[Security_GetListByCUSIP] TO Public
+CREATING ALL ON [dbo].[Security_DeleteMarkedForRemoval] TO Public
+CREATING ALL ON [dbo].[Security_Refresh] TO Public
+CREATING ALL ON [dbo].[Security_GetListByUserSecurityOverride] TO Public
+CREATING ALL ON [dbo].[Security_GetOutOfDateSummary] TO Public
+CREATING ALL ON [dbo].[Security_GetUsersWithMarkedSecurities] TO Public
+CREATING ALL ON [dbo].[Security_RefreshData] TO Public
+CREATING ALL ON [dbo].[SecurityRefresh_Clear] TO Public
+CREATING ALL ON [dbo].[SecurityRefresh_GetByID] TO Public
+CREATING ALL ON [dbo].[SecurityRefresh_GetSchema] TO Public
+CREATING ALL ON [dbo].[SecurityRefresh_GetListByIDList] TO Public
+CREATING ALL ON [dbo].[SecurityAlias_Clear] TO Public
+CREATING ALL ON [dbo].[SecurityAlias_GetSchema] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_GetByUserIDWithSecrityID] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_GetByUserID] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_GetBySecurityID] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_GetByAccountHoldingID] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_DeleteByAccountHoldingIDs] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_GetByUserHoldings] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_Select] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_Insert] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_Update] TO Public
+CREATING ALL ON [dbo].[SecurityOverride_Delete] TO Public
+CREATING ALL ON [dbo].[Partner_Select] TO Public
+CREATING ALL ON [dbo].[Partner_Insert] TO Public
+CREATING ALL ON [dbo].[Partner_Update] TO Public
+CREATING ALL ON [dbo].[Partner_Delete] TO Public
+CREATING ALL ON [dbo].[Partner_CreateRoot] TO Public
+CREATING ALL ON [dbo].[Partner_Create] TO Public
+CREATING ALL ON [dbo].[Partner_Get] TO Public
+CREATING ALL ON [dbo].[Partner_GetPartnerList] TO Public
+CREATING ALL ON [dbo].[Partner_Move] TO Public
+CREATING ALL ON [dbo].[Partner_UpdateDescription] TO Public
+CREATING ALL ON [dbo].[Partner_EffectiveBillingContractID] TO Public
+CREATING ALL ON [dbo].[Partner_DeleteAfterMovingUsers] TO Public
+CREATING ALL ON [dbo].[Partner_GetLicenseOverrides] TO Public
+CREATING ALL ON [dbo].[Partner_UpdateSubscriptionCounts] TO Public
+CREATING ALL ON [dbo].[User_Select] TO Public
+CREATING ALL ON [dbo].[User_Insert] TO Public
+CREATING ALL ON [dbo].[User_Update] TO Public
+CREATING ALL ON [dbo].[User_DeleteReferences] TO Public
+CREATING ALL ON [dbo].[User_RecoverableDelete] TO Public
+CREATING ALL ON [dbo].[User_Delete] TO Public
+CREATING ALL ON [dbo].[User_Undelete] TO Public
+CREATING ALL ON [dbo].[User_GetIDListByPartnerID] TO Public
+CREATING ALL ON [dbo].[User_GetProducerLicenseInfo] TO Public
+CREATING ALL ON [dbo].[User_ChangePartner] TO Public
+CREATING ALL ON [dbo].[User_GetOldUsers] TO Public
+CREATING ALL ON [dbo].[User_FindByUserID] TO Public
+CREATING ALL ON [dbo].[User_FindByUserIDs] TO Public
+CREATING ALL ON [dbo].[User_FindByUserRole] TO Public
+CREATING ALL ON [dbo].[User_FindActiveByUserRole] TO Public
+CREATING ALL ON [dbo].[User_FindExpiredUsers] TO Public
+CREATING ALL ON [dbo].[User_FindOwnedUsers] TO Public
+CREATING ALL ON [dbo].[User_FindAddlLogons] TO Public
+CREATING ALL ON [dbo].[User_FindByOfficeID] TO Public
+CREATING ALL ON [dbo].[User_FindByBillingContractID] TO Public
+CREATING ALL ON [dbo].[User_FindBillingUserID] TO Public
+CREATING ALL ON [dbo].[User_FindByUserName] TO Public
+CREATING ALL ON [dbo].[User_GetNumUsersByOfficeID] TO Public
+CREATING ALL ON [dbo].[GenerateBillingReport] TO Public
+CREATING ALL ON [dbo].[sp_CheckGuardianEntitlements] TO Public
+CREATING ALL ON [dbo].[sp_CheckGuardianEntitlementsReport] TO Public
+CREATING ALL ON [dbo].[User_BillingUnitFilter] TO Public
+CREATING ALL ON [dbo].[User_UpdateBillingUnitContract] TO Public
+CREATING ALL ON [dbo].[User_UpdateOfficeContract] TO Public
+CREATING ALL ON [dbo].[User_GetPASEntitlements] TO Public
+CREATING ALL ON [dbo].[User_GetSubscriptionCounts] TO Public
+CREATING ALL ON [dbo].[User_GetAgencyList] TO Public
+CREATING ALL ON [dbo].[User_GetAssistantList] TO Public
+CREATING ALL ON [dbo].[User_GetAssistantsPerAgency] TO Public
+CREATING ALL ON [dbo].[AgencyName_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyName_GetAll] TO Public
+CREATING ALL ON [dbo].[User_GetAdvisorExtract] TO Public
+CREATING ALL ON [dbo].[User_GetMonthlyReport] TO Public
+CREATING ALL ON [dbo].[Session_Create] TO Public
+CREATING ALL ON [dbo].[Session_UpdateExpirationDate] TO Public
+CREATING ALL ON [dbo].[Session_Get] TO Public
+CREATING ALL ON [dbo].[Session_Delete] TO Public
+CREATING ALL ON [dbo].[Session_GetSingleSignOnSession] TO Public
+CREATING ALL ON [dbo].[Session_GetSingleSignOnKey] TO Public
+CREATING ALL ON [dbo].[Session_Expire] TO Public
+CREATING ALL ON [dbo].[UserAccount_Select] TO Public
+CREATING ALL ON [dbo].[UserAccount_Insert] TO Public
+CREATING ALL ON [dbo].[UserAccount_Update] TO Public
+CREATING ALL ON [dbo].[UserAccount_Delete] TO Public
+CREATING ALL ON [dbo].[UserAccount_Get] TO Public
+CREATING ALL ON [dbo].[UserAccount_GetByName] TO Public
+CREATING ALL ON [dbo].[UserAccount_GetByLastName] TO Public
+CREATING ALL ON [dbo].[UserAccount_UpdateBadLogons] TO Public
+CREATING ALL ON [dbo].[UserAccount_UpdateLastLogon] TO Public
+CREATING ALL ON [dbo].[UserAccount_GetUniqueUserName] TO Public
+CREATING ALL ON [dbo].[UserAccount_UserNameExists] TO Public
+CREATING ALL ON [dbo].[UserAccount_GetAccountsForPartner] TO Public
+CREATING ALL ON [dbo].[UserAccount_MISReport] TO Public
+CREATING ALL ON [dbo].[UserAccount_ProducerUsageReport] TO Public
+CREATING ALL ON [dbo].[UserAccount_ProducerUsageDetailReport] TO Public
+CREATING ALL ON [dbo].[UserAccount_ClientUsageReport] TO Public
+CREATING ALL ON [dbo].[UserAccount_ClientMailingReport] TO Public
+CREATING ALL ON [dbo].[UserAccount_ClientSiteLogonListReport] TO Public
+CREATING ALL ON [dbo].[UserAccount_GetAddlLogonList] TO Public
+CREATING ALL ON [dbo].[UserAccount_AggregationReport] TO Public
+CREATING ALL ON [dbo].[UserAccount_ConvertToPrimary] TO Public
+CREATING ALL ON [dbo].[UserAccount_Map] TO Public
+CREATING ALL ON [dbo].[UserAccount_ClientSiteUsageReport] TO Public
+CREATING ALL ON [dbo].[UserAccount_BillingUnitUsageReport] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_Select] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_Insert] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_Update] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_Delete] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_GetOwnerAccessorID] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_GetRights] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_SelectOne] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_ChangeOwnerRights] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_GetSharingRules] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_GetSharingRulesAlliance] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_GetSharingRulesClient] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_RemoveIndividualShareRules] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_IsDelegate] TO Public
+CREATING ALL ON [dbo].[UserAccessRight_OwnedClients] TO Public
+CREATING ALL ON [dbo].[Search_Users] TO Public
+CREATING ALL ON [dbo].[SecurityLog_Purge] TO Public
+CREATING ALL ON [dbo].[SecurityLog_Insert] TO Public
+CREATING ALL ON [dbo].[SecurityLog_InsertBadLogon] TO Public
+CREATING ALL ON [dbo].[SecurityLog_List] TO Public
+CREATING ALL ON [dbo].[UserActionHistory_Add] TO Public
+CREATING ALL ON [dbo].[UserActionHistory_Purge] TO Public
+CREATING ALL ON [dbo].[UserActionHistory_List] TO Public
+CREATING ALL ON [dbo].[UserPreference_Select] TO Public
+CREATING ALL ON [dbo].[UserPreference_Insert] TO Public
+CREATING ALL ON [dbo].[UserPreference_Update] TO Public
+CREATING ALL ON [dbo].[UserPreference_Delete] TO Public
+CREATING ALL ON [dbo].[UserPreference_GetPreferences] TO Public
+CREATING ALL ON [dbo].[UserPreference_GetPreference] TO Public
+CREATING ALL ON [dbo].[UserPreference_GetPreferenceByDataType] TO Public
+CREATING ALL ON [dbo].[UserPreference_SetOwnedAndDelegatedPreference] TO Public
+CREATING ALL ON [dbo].[UserPreference_SetOwnedAlliancePartnerPreference] TO Public
+CREATING ALL ON [dbo].[UserBlob_Insert] TO Public
+CREATING ALL ON [dbo].[UserBlob_Delete] TO Public
+CREATING ALL ON [dbo].[UserBlob_Update] TO Public
+CREATING ALL ON [dbo].[UserBlob_Select] TO Public
+CREATING ALL ON [dbo].[UserBlob_GetByUserID] TO Public
+CREATING ALL ON [dbo].[UserBlob_CopyVaultAccessToAllAlliancePartnersForClient] TO Public
+CREATING ALL ON [dbo].[UserBlob_SetOwnedAndDelegatedBlob] TO Public
+CREATING ALL ON [dbo].[UserExternalID_Create] TO Public
+CREATING ALL ON [dbo].[UserExternalID_Delete] TO Public
+CREATING ALL ON [dbo].[UserExternalID_FindByGlobalUserID] TO Public
+CREATING ALL ON [dbo].[UserExternalID_FindByDomainID] TO Public
+CREATING ALL ON [dbo].[UserExternalID_FindByDomainAndAdvisor] TO Public
+CREATING ALL ON [dbo].[UserExternalID_FindByUserIDRole] TO Public
+CREATING ALL ON [dbo].[UserExternalID_GetExternalIDs] TO Public
+CREATING ALL ON [dbo].[UserExternalID_GetExternalID] TO Public
+CREATING ALL ON [dbo].[UserExternalID_Select] TO Public
+CREATING ALL ON [dbo].[AccountHolding_Select] TO Public
+CREATING ALL ON [dbo].[AccountHolding_Insert] TO Public
+CREATING ALL ON [dbo].[AccountHolding_Update] TO Public
+CREATING ALL ON [dbo].[AccountHolding_Delete] TO Public
+CREATING ALL ON [dbo].[AccountHolding_GetByFactID] TO Public
+CREATING ALL ON [dbo].[AccountHolding_GetCountByFactID] TO Public
+CREATING ALL ON [dbo].[AccountHolding_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AccountHolding_GetTopHoldings] TO Public
+CREATING ALL ON [dbo].[AccountHolding_GetTopSecurities] TO Public
+CREATING ALL ON [dbo].[AccountHolding_RefreshManualHoldings] TO Public
+CREATING ALL ON [dbo].[AccountHolding_GetByFactIDList] TO Public
+CREATING ALL ON [dbo].[AccountHolding_GetByCanbeOverriden] TO Public
+CREATING ALL ON [dbo].[AccountHistory_Select] TO Public
+CREATING ALL ON [dbo].[AccountHistory_Insert] TO Public
+CREATING ALL ON [dbo].[AccountHistory_Update] TO Public
+CREATING ALL ON [dbo].[AccountHistory_Delete] TO Public
+CREATING ALL ON [dbo].[AccountHistory_GetByAsOfDate] TO Public
+CREATING ALL ON [dbo].[AccountHistory_GetListByAsOfDate] TO Public
+CREATING ALL ON [dbo].[AccountHistory_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AccountHistory_UpdateBatch] TO Public
+CREATING ALL ON [dbo].[AccountHistory_GetRecordsToPurge] TO Public
+CREATING ALL ON [dbo].[InvestmentGroup_Select] TO Public
+CREATING ALL ON [dbo].[InvestmentGroup_Insert] TO Public
+CREATING ALL ON [dbo].[InvestmentGroup_Update] TO Public
+CREATING ALL ON [dbo].[InvestmentGroup_Delete] TO Public
+CREATING ALL ON [dbo].[InvestmentGroup_GetByUserID] TO Public
+CREATING ALL ON [dbo].[InvestmentGroup_Find] TO Public
+CREATING ALL ON [dbo].[Scenario_Select] TO Public
+CREATING ALL ON [dbo].[Scenario_Insert] TO Public
+CREATING ALL ON [dbo].[Scenario_Update] TO Public
+CREATING ALL ON [dbo].[Scenario_Delete] TO Public
+CREATING ALL ON [dbo].[Scenario_GetByUserID] TO Public
+CREATING ALL ON [dbo].[Scenario_GetByScenarioType] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactChanges_Recursive] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactChanges] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactChangesByRootFactID] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactChangesByType] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactChangesByTypeSortByName] TO Public
+CREATING ALL ON [dbo].[Scenario_DeleteDerived] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactSummaries] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactSummaries_Recursive] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactSummariesByType] TO Public
+CREATING ALL ON [dbo].[Scenario_GetFactSummariesByTypeExact] TO Public
+CREATING ALL ON [dbo].[Scenario_IncludeFactChanges] TO Public
+CREATING ALL ON [dbo].[Scenario_GetSubAccounts] TO Public
+CREATING ALL ON [dbo].[FactChange_Insert] TO Public
+CREATING ALL ON [dbo].[FactChange_Update] TO Public
+CREATING ALL ON [dbo].[FactChange_Delete] TO Public
+CREATING ALL ON [dbo].[FactChange_Select] TO Public
+CREATING ALL ON [dbo].[FactChange_GetAncestors] TO Public
+CREATING ALL ON [dbo].[FactChange_GetRelated] TO Public
+CREATING ALL ON [dbo].[FactChange_GetByUserID] TO Public
+CREATING ALL ON [dbo].[FactChange_GetByUserIDFactType] TO Public
+CREATING ALL ON [dbo].[FactChange_PrepareRollupAccount] TO Public
+CREATING ALL ON [dbo].[FactChange_UpdateFact] TO Public
+CREATING ALL ON [dbo].[FactChange_GetFactSummariesByUserID] TO Public
+CREATING ALL ON [dbo].[FactChange_GetByFactIDList] TO Public
+CREATING ALL ON [dbo].[FactChange_GetFactSummariesByFactIDList] TO Public
+CREATING ALL ON [dbo].[FactChange_GetSubAccountSummariesByFactIDList] TO Public
+CREATING ALL ON [dbo].[FactChange_GetAdditionalAccountSummaryInfoValues] TO Public
+CREATING ALL ON [dbo].[User_UpdateAllAssetsGrowthRateToDefaultGrowthRate] TO Public
+CREATING ALL ON [dbo].[FactChange_CountIndividualModelRatesToReset] TO Public
+CREATING ALL ON [dbo].[FactChange_MarkIndividualModelRatesToReset] TO Public
+CREATING ALL ON [dbo].[FactChange_GetNextChunkOfIndividualModelRateFactIDsToReset] TO Public
+CREATING ALL ON [dbo].[User_GetModelPortfolioUsersByType] TO Public
+CREATING ALL ON [dbo].[FactChange_GetEffectiveModelRateFactID] TO Public
+CREATING ALL ON [dbo].[FactChange_GetEffectiveModelVersion] TO Public
+CREATING ALL ON [dbo].[FactChange_GetEffectiveModelRateFact] TO Public
+CREATING ALL ON [dbo].[FactChange_GetAlternativeModelRateFact] TO Public
+CREATING ALL ON [dbo].[FactChange_GetMyModelRateFact] TO Public
+CREATING ALL ON [dbo].[FactChange_GetByUnderManagement] TO Public
+CREATING ALL ON [dbo].[FactChange_GetLinkedAndManagementOpportunityStatus] TO Public
+CREATING ALL ON [dbo].[Contact_Select] TO Public
+CREATING ALL ON [dbo].[Contact_Insert] TO Public
+CREATING ALL ON [dbo].[Contact_Update] TO Public
+CREATING ALL ON [dbo].[Contact_Delete] TO Public
+CREATING ALL ON [dbo].[Advisor_Select] TO Public
+CREATING ALL ON [dbo].[Advisor_Insert] TO Public
+CREATING ALL ON [dbo].[Advisor_Update] TO Public
+CREATING ALL ON [dbo].[Advisor_Delete] TO Public
+CREATING ALL ON [dbo].[Advisor_GetByUserID] TO Public
+CREATING ALL ON [dbo].[BrokerDealer_Select] TO Public
+CREATING ALL ON [dbo].[BrokerDealer_Insert] TO Public
+CREATING ALL ON [dbo].[BrokerDealer_Update] TO Public
+CREATING ALL ON [dbo].[BrokerDealer_Delete] TO Public
+CREATING ALL ON [dbo].[BrokerDealer_SelectOne] TO Public
+CREATING ALL ON [dbo].[ContactRecent_UpdateOverride] TO Public
+CREATING ALL ON [dbo].[ContactRecent_Delete] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_Insert] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_Update] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_Delete] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_Rename] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_SelectOneByUserIDPathName] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_SelectOneByFileSystemObjectID] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_Find] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_FindAll] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_FindAllFilesInPath] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_DeleteFilesInFolder] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_UpdateSummary] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_UpdateSummaryByPath] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_RepairSummaries] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_GetFilesByFactID] TO Public
+CREATING ALL ON [dbo].[FileSystemObject_GetFilesByFactIDAndSubAccounts] TO Public
+CREATING ALL ON [dbo].[VaultUsage_Select] TO Public
+CREATING ALL ON [dbo].[VaultAllocation_Select] TO Public
+CREATING ALL ON [dbo].[VaultAllocation_Insert] TO Public
+CREATING ALL ON [dbo].[VaultAllocation_Update] TO Public
+CREATING ALL ON [dbo].[VaultAllocation_Delete] TO Public
+CREATING ALL ON [dbo].[VaultAllocation_SelectOne] TO Public
+CREATING ALL ON [dbo].[VaultAllocationDisplay_SelectOne] TO Public
+CREATING ALL ON [dbo].[VaultAllocationDisplay_Search] TO Public
+CREATING ALL ON [dbo].[VaultAllocation_SetOwnedAndDelegatedAllocation] TO Public
+CREATING ALL ON [dbo].[VaultUsageDisplay_SelectOne] TO Public
+CREATING ALL ON [dbo].[AlertOption_Select] TO Public
+CREATING ALL ON [dbo].[AlertOption_Insert] TO Public
+CREATING ALL ON [dbo].[AlertOption_Update] TO Public
+CREATING ALL ON [dbo].[AlertOption_Delete] TO Public
+CREATING ALL ON [dbo].[AlertOption_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AlertOption_GetByUserIDAlertRuleIDList] TO Public
+CREATING ALL ON [dbo].[AlertOptionRecipient_Insert] TO Public
+CREATING ALL ON [dbo].[AlertOptionRecipient_GetByAlertOptionID] TO Public
+CREATING ALL ON [dbo].[AlertOptionRecipient_SelectOneByAlertOptionIDUserID] TO Public
+CREATING ALL ON [dbo].[AlertOptionRecipient_SelectOneByAlertOptionIDEmail] TO Public
+CREATING ALL ON [dbo].[AlertOptionRecipient_DeleteByAlertOptionIDUserID] TO Public
+CREATING ALL ON [dbo].[AlertOptionRecipient_DeleteByAlertOptionIDEmail] TO Public
+CREATING ALL ON [dbo].[AlertOptionRecipient_DeleteAll] TO Public
+CREATING ALL ON [dbo].[AlertNotification_Insert] TO Public
+CREATING ALL ON [dbo].[AlertNotification_Update] TO Public
+CREATING ALL ON [dbo].[AlertNotification_Delete] TO Public
+CREATING ALL ON [dbo].[AlertNotification_Select] TO Public
+CREATING ALL ON [dbo].[AlertNotification_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_SelectNotSentByRecipientUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_SelectNotSentByRecipientEmail] TO Public
+CREATING ALL ON [dbo].[AlertNotification_GetClientsByUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_GetSharedClientsByUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_GetAllClientsByUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_GetWithClientsByUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_GetClientNotifications] TO Public
+CREATING ALL ON [dbo].[AlertNotification_GetAlertAndTaskSummary] TO Public
+CREATING ALL ON [dbo].[AlertNotification_DeleteByExpiration] TO Public
+CREATING ALL ON [dbo].[AlertNotification_DeleteByAlertOptionID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_DeleteByUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_SetMessageReadByAlertOptionID] TO Public
+CREATING ALL ON [dbo].[AlertNotification_SetMessageReadByUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotificationRecipient_Insert] TO Public
+CREATING ALL ON [dbo].[AlertNotificationRecipient_MarkAsSentByAlertNotificationIDUserID] TO Public
+CREATING ALL ON [dbo].[AlertNotificationRecipient_MarkAsSentByAlertNotificationIDEmail] TO Public
+CREATING ALL ON [dbo].[AlertNotificationRecipient_SelectNonUsers] TO Public
+CREATING ALL ON [dbo].[AlertNotificationRecipient_SelectByAlertNotificationID] TO Public
+CREATING ALL ON [dbo].[QuestionAnswer_Select] TO Public
+CREATING ALL ON [dbo].[QuestionAnswer_Insert] TO Public
+CREATING ALL ON [dbo].[QuestionAnswer_Update] TO Public
+CREATING ALL ON [dbo].[QuestionAnswer_Delete] TO Public
+CREATING ALL ON [dbo].[AnalysisGrid_Select] TO Public
+CREATING ALL ON [dbo].[AnalysisGrid_Insert] TO Public
+CREATING ALL ON [dbo].[AnalysisGrid_Update] TO Public
+CREATING ALL ON [dbo].[AnalysisGrid_Delete] TO Public
+CREATING ALL ON [dbo].[AnalysisGrid_SelectOne] TO Public
+CREATING ALL ON [dbo].[EducationExpenses_GetByID] TO Public
+CREATING ALL ON [dbo].[EducationExpenses_GetByStateAndName] TO Public
+CREATING ALL ON [dbo].[EducationExpenses_GetAllByState] TO Public
+CREATING ALL ON [dbo].[EducationExpenses_GetAll] TO Public
+CREATING ALL ON [dbo].[Presentation_Select] TO Public
+CREATING ALL ON [dbo].[Presentation_Insert] TO Public
+CREATING ALL ON [dbo].[Presentation_Update] TO Public
+CREATING ALL ON [dbo].[Presentation_Delete] TO Public
+CREATING ALL ON [dbo].[Presentation_GetPresentationSummaries] TO Public
+CREATING ALL ON [dbo].[Presentation_GetPresentationSummariesByGroup] TO Public
+CREATING ALL ON [dbo].[Presentation_GetPresentationMetaTemplates] TO Public
+CREATING ALL ON [dbo].[Presentation_GetByUserID] TO Public
+CREATING ALL ON [dbo].[Presentation_GetByUserIDAndGroup] TO Public
+CREATING ALL ON [dbo].[Presentation_SelectOne] TO Public
+CREATING ALL ON [dbo].[Presentation_SelectOneByClientAndName] TO Public
+CREATING ALL ON [dbo].[DataUpgradeHistory_Insert] TO Public
+CREATING ALL ON [dbo].[AwardsManager_Select] TO Public
+CREATING ALL ON [dbo].[AwardsManager_Update] TO Public
+CREATING ALL ON [dbo].[AwardsManager_Delete] TO Public
+CREATING ALL ON [dbo].[AwardsManager_Insert] TO Public
+CREATING ALL ON [dbo].[AwardsManager_GetUsage] TO Public
+CREATING ALL ON [dbo].[AwardsManager_SelectOne] TO Public
+CREATING ALL ON [dbo].[AwardsManager_ValidateAndResolveSso] TO Public
+CREATING ALL ON [dbo].[UserAgreement_Select] TO Public
+CREATING ALL ON [dbo].[UserAgreement_Delete] TO Public
+CREATING ALL ON [dbo].[UserAgreement_SelectAll] TO Public
+CREATING ALL ON [dbo].[UserAgreement_UpdateOverride] TO Public
+CREATING ALL ON [dbo].[Note_Select] TO Public
+CREATING ALL ON [dbo].[Note_Insert] TO Public
+CREATING ALL ON [dbo].[Note_Update] TO Public
+CREATING ALL ON [dbo].[Note_Delete] TO Public
+CREATING ALL ON [dbo].[Note_SelectByClient] TO Public
+CREATING ALL ON [dbo].[Note_SelectByFact] TO Public
+CREATING ALL ON [dbo].[Task_Insert] TO Public
+CREATING ALL ON [dbo].[Task_Update] TO Public
+CREATING ALL ON [dbo].[Task_Delete] TO Public
+CREATING ALL ON [dbo].[Task_Select] TO Public
+CREATING ALL ON [dbo].[Task_SelectByClient] TO Public
+CREATING ALL ON [dbo].[Task_SelectByClientCompleted] TO Public
+CREATING ALL ON [dbo].[Task_SelectByAssignedTo] TO Public
+CREATING ALL ON [dbo].[Task_SelectByAssignedToCompleted] TO Public
+CREATING ALL ON [dbo].[Task_SelectByRequestedBy] TO Public
+CREATING ALL ON [dbo].[Task_SelectByRequestedByCompleted] TO Public
+CREATING ALL ON [dbo].[Task_SelectOpenTasksPerClientByAssignedTo] TO Public
+CREATING ALL ON [dbo].[Task_SelectOpenTasksByAssignedTo] TO Public
+CREATING ALL ON [dbo].[Checklist_Select] TO Public
+CREATING ALL ON [dbo].[Checklist_Insert] TO Public
+CREATING ALL ON [dbo].[Checklist_Update] TO Public
+CREATING ALL ON [dbo].[Checklist_Delete] TO Public
+CREATING ALL ON [dbo].[PersonalFinancialBiography_Select] TO Public
+CREATING ALL ON [dbo].[PersonalFinancialBiography_Insert] TO Public
+CREATING ALL ON [dbo].[PersonalFinancialBiography_Update] TO Public
+CREATING ALL ON [dbo].[PersonalFinancialBiography_Delete] TO Public
+CREATING ALL ON [dbo].[PersonalFinancialBiography_SelectByClient] TO Public
+CREATING ALL ON [dbo].[PortfolioAnalysis_Select] TO Public
+CREATING ALL ON [dbo].[PortfolioAnalysis_Insert] TO Public
+CREATING ALL ON [dbo].[PortfolioAnalysis_Update] TO Public
+CREATING ALL ON [dbo].[PortfolioAnalysis_Delete] TO Public
+CREATING ALL ON [dbo].[PortfolioAnalysis_SelectByUserID] TO Public
+CREATING ALL ON [dbo].[PresentationReview_Select] TO Public
+CREATING ALL ON [dbo].[PresentationReview_Insert] TO Public
+CREATING ALL ON [dbo].[PresentationReview_Update] TO Public
+CREATING ALL ON [dbo].[PresentationReview_Delete] TO Public
+CREATING ALL ON [dbo].[PresentationReview_SelectOne] TO Public
+CREATING ALL ON [dbo].[PresentationReview_GetListCompliance] TO Public
+CREATING ALL ON [dbo].[PresentationReview_SelectPendingByVaultID] TO Public
+CREATING ALL ON [dbo].[PresentationReview_GetListReviewers] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_Enqueue] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_Dequeue] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_Clear] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_Peek] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_PeekAll] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_GetNumMessages] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_GetStatusByUserID] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_GetStatusByUserIDAndMessageType] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_Cancel] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_SetState] TO Public
+CREATING ALL ON [dbo].[Queue_Reports_ClearState] TO Public
+CREATING ALL ON [dbo].[Queue_Test_Enqueue] TO Public
+CREATING ALL ON [dbo].[Queue_Test_Dequeue] TO Public
+CREATING ALL ON [dbo].[Queue_Test_Clear] TO Public
+CREATING ALL ON [dbo].[Queue_Test_Peek] TO Public
+CREATING ALL ON [dbo].[Queue_Test_PeekAll] TO Public
+CREATING ALL ON [dbo].[Queue_Test_GetNumMessages] TO Public
+CREATING ALL ON [dbo].[Queue_Test_GetStatusByUserID] TO Public
+CREATING ALL ON [dbo].[Queue_Test_GetStatusByUserIDAndMessageType] TO Public
+CREATING ALL ON [dbo].[Queue_Test_Cancel] TO Public
+CREATING ALL ON [dbo].[Queue_Test_SetState] TO Public
+CREATING ALL ON [dbo].[Queue_Test_ClearState] TO Public
+CREATING ALL ON [dbo].[NetWorthHistory_Select] TO Public
+CREATING ALL ON [dbo].[NetWorthHistory_Insert] TO Public
+CREATING ALL ON [dbo].[NetWorthHistory_Update] TO Public
+CREATING ALL ON [dbo].[NetWorthHistory_Delete] TO Public
+CREATING ALL ON [dbo].[NetWorthHistory_GetByUserID] TO Public
+CREATING ALL ON [dbo].[NetWorthHistory_UpdateOverride] TO Public
+CREATING ALL ON [dbo].[NetWorthHistory_GetLatestByUserID] TO Public
+CREATING ALL ON [dbo].[NetWorthHistory_ClientImportUpgrade] TO Public
+CREATING ALL ON [dbo].[Template_SelectOne] TO Public
+CREATING ALL ON [dbo].[Template_SelectOneByClientUserID] TO Public
+CREATING ALL ON [dbo].[Template_SelectByUserID] TO Public
+CREATING ALL ON [dbo].[Template_Insert] TO Public
+CREATING ALL ON [dbo].[Template_Update] TO Public
+CREATING ALL ON [dbo].[Template_Delete] TO Public
+CREATING ALL ON [dbo].[Template_GetNames] TO Public
+CREATING ALL ON [dbo].[Template_GetTemplateList] TO Public
+CREATING ALL ON [dbo].[MajorAccountType_FindByFactType] TO Public
+CREATING ALL ON [dbo].[MajorAccountType_FindByMajorAccountType] TO Public
+CREATING ALL ON [dbo].[MajorAccountType_SelectAll] TO Public
+CREATING ALL ON [dbo].[ClientAccessApproval_Insert] TO Public
+CREATING ALL ON [dbo].[ClientAccessApproval_Update] TO Public
+CREATING ALL ON [dbo].[ClientAccessApproval_Select] TO Public
+CREATING ALL ON [dbo].[ClientAccessApproval_GetClientApprovals] TO Public
+CREATING ALL ON [dbo].[ClientAccessApproval_CountClientApprovals] TO Public
+CREATING ALL ON [dbo].[ClientAccessApproval_Delete] TO Public
+CREATING ALL ON [dbo].[ClientAccessApproval_RemoveApprovalsForInaccessibleClients] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_Insert] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_Update] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_Delete] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_MarkDirty] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_MarkParentDirty] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_Approve] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_Select] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_SelectByUserID] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_ApproveAllForUser] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_MarkRejectionsProcessedForUser] TO Public
+CREATING ALL ON [dbo].[FactChangeApproval_CountUnprocessedRejectionsByUserID] TO Public
+CREATING ALL ON [dbo].[Checkout_Checkout] TO Public
+CREATING ALL ON [dbo].[Checkout_Checkin] TO Public
+CREATING ALL ON [dbo].[Checkout_Undo] TO Public
+CREATING ALL ON [dbo].[Checkout_GetNumberOfCheckoutsForAgent] TO Public
+CREATING ALL ON [dbo].[Checkout_IsCheckedOut] TO Public
+CREATING ALL ON [dbo].[Checkout_GetCheckedOutClients] TO Public
+CREATING ALL ON [dbo].[Checkout_CheckedOutBy] TO Public
+CREATING ALL ON [dbo].[Checkout_FindExpiredCheckouts] TO Public
+CREATING ALL ON [dbo].[Checkout_Select] TO Public
+CREATING ALL ON [dbo].[Checkout_CheckoutList] TO Public
+CREATING ALL ON [dbo].[OfflineHistory_UpdateCheckout] TO Public
+CREATING ALL ON [dbo].[OfflineHistory_UpdateCheckin] TO Public
+CREATING ALL ON [dbo].[OfflineHistory_UpdateInitialLogon] TO Public
+CREATING ALL ON [dbo].[OfflineHistory_OfflineUsageReport] TO Public
+CREATING ALL ON [dbo].[TaskHistory_Purge] TO Public
+CREATING ALL ON [dbo].[TaskHistory_Select] TO Public
+CREATING ALL ON [dbo].[TaskHistory_Insert] TO Public
+CREATING ALL ON [dbo].[TaskHistory_Update] TO Public
+CREATING ALL ON [dbo].[TaskHistory_Delete] TO Public
+CREATING ALL ON [dbo].[ClientHistory_Select] TO Public
+CREATING ALL ON [dbo].[ClientHistory_Insert] TO Public
+CREATING ALL ON [dbo].[ClientHistory_Update] TO Public
+CREATING ALL ON [dbo].[ClientHistory_Delete] TO Public
+CREATING ALL ON [dbo].[ClientHistory_UpdateSubTypeMapping] TO Public
+CREATING ALL ON [dbo].[Search_ClientHistory] TO Public
+CREATING ALL ON [dbo].[InvestmentPolicy_Select] TO Public
+CREATING ALL ON [dbo].[InvestmentPolicy_Insert] TO Public
+CREATING ALL ON [dbo].[InvestmentPolicy_Update] TO Public
+CREATING ALL ON [dbo].[InvestmentPolicy_Delete] TO Public
+CREATING ALL ON [dbo].[Opportunity_Insert] TO Public
+CREATING ALL ON [dbo].[Opportunity_Select] TO Public
+CREATING ALL ON [dbo].[Opportunity_Update] TO Public
+CREATING ALL ON [dbo].[Opportunity_Delete] TO Public
+CREATING ALL ON [dbo].[Opportunity_Truncate] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetTimestamp] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetByAdvisorID] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetByClientID] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetByNeedType] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetTotalNeedForClient] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetCountForClient] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetCountForAdvisor] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetNeedsSummaryForClient] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetClientRank] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetTotalAssetsUnderManagementByClient] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetTotalAssetsUnderManagementByAdvisor] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetTotalAssetsByClient] TO Public
+CREATING ALL ON [dbo].[Opportunity_GetTotalAssetsByAdvisor] TO Public
+CREATING ALL ON [dbo].[UserGroup_Select] TO Public
+CREATING ALL ON [dbo].[UserGroup_Insert] TO Public
+CREATING ALL ON [dbo].[UserGroup_Update] TO Public
+CREATING ALL ON [dbo].[UserGroup_Delete] TO Public
+CREATING ALL ON [dbo].[UserGroup_GetGroupListByOwnerID] TO Public
+CREATING ALL ON [dbo].[UserGroup_GetMembershipListForUser] TO Public
+CREATING ALL ON [dbo].[UserGroupMembership_Delete] TO Public
+CREATING ALL ON [dbo].[UserGroupMembership_AddToGroup] TO Public
+CREATING ALL ON [dbo].[UserGroupMembership_RemoveFromGroup] TO Public
+CREATING ALL ON [dbo].[UserGroupMembership_IsGroupMember] TO Public
+CREATING ALL ON [dbo].[UserOffice_Get] TO Public
+CREATING ALL ON [dbo].[UserOffice_Insert] TO Public
+CREATING ALL ON [dbo].[UserOffice_Delete] TO Public
+CREATING ALL ON [dbo].[PlayList_Update] TO Public
+CREATING ALL ON [dbo].[PlayList_SelectOne] TO Public
+CREATING ALL ON [dbo].[PlayList_Insert] TO Public
+CREATING ALL ON [dbo].[PlayList_GetByUserID] TO Public
+CREATING ALL ON [dbo].[PlayList_GetByRoomType] TO Public
+CREATING ALL ON [dbo].[PlayList_GetAllByRoomType] TO Public
+CREATING ALL ON [dbo].[PlayList_Delete] TO Public
+CREATING ALL ON [dbo].[PlayList_GetAllExpertTemplates] TO Public
+CREATING ALL ON [dbo].[PlayList_GetDefault] TO Public
+CREATING ALL ON [dbo].[ReferredContact_Select] TO Public
+CREATING ALL ON [dbo].[ReferredContact_Insert] TO Public
+CREATING ALL ON [dbo].[ReferredContact_Update] TO Public
+CREATING ALL ON [dbo].[ReferredContact_Delete] TO Public
+CREATING ALL ON [dbo].[Remapper_GetUsersByOffice] TO Public
+CREATING ALL ON [dbo].[Remapper_UpdateAssetAllocationAlert] TO Public
+CREATING ALL ON [dbo].[Remapper_GetAssetAllocationAlerts] TO Public
+CREATING ALL ON [dbo].[Remapper_UpdateSecurityOverrides] TO Public
+CREATING ALL ON [dbo].[Remapper_ResetRiskTolerance] TO Public
+CREATING ALL ON [dbo].[AgencyDelegate_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyDelegate_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyDelegate_Delete] TO Public
+CREATING ALL ON [dbo].[AgencyDelegate_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AgencyDelegate_GetByDelegateID] TO Public
+CREATING ALL ON [dbo].[AgencyDirector_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyDirector_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyDirector_Delete] TO Public
+CREATING ALL ON [dbo].[AgencyDirector_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AgencyDirector_GetByDirectorID] TO Public
+CREATING ALL ON [dbo].[AgencyOfficeLink_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyOfficeLink_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyOfficeLink_Delete] TO Public
+CREATING ALL ON [dbo].[AgencyOfficeLink_GetByUserID] TO Public
+CREATING ALL ON [dbo].[Agency_GetAgentListSummary] TO Public
+CREATING ALL ON [dbo].[Agency_GetGroupListSummary] TO Public
+CREATING ALL ON [dbo].[Agency_GetAgentListSummarySingleGroup] TO Public
+CREATING ALL ON [dbo].[Agency_GetAvailableManagementTeamMembers] TO Public
+CREATING ALL ON [dbo].[Agency_GetClientStickinessList] TO Public
+CREATING ALL ON [dbo].[Agency_GetFinancialRepInfo] TO Public
+CREATING ALL ON [dbo].[Agency_GetActionItems] TO Public
+CREATING ALL ON [dbo].[Agency_GetActionItemsForSpecificAgent] TO Public
+CREATING ALL ON [dbo].[Agency_GetNumberOfSuspendedViewableAgents] TO Public
+CREATING ALL ON [dbo].[AgencyGroup_Update] TO Public
+CREATING ALL ON [dbo].[AgencyGroup_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyGroup_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyGroup_Delete] TO Public
+CREATING ALL ON [dbo].[AgencyGroup_GetByAgencyHead] TO Public
+CREATING ALL ON [dbo].[AgencyGroup_GetByGroupCreator] TO Public
+CREATING ALL ON [dbo].[AgencyGroupMember_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyGroupMember_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyGroupMember_Delete] TO Public
+CREATING ALL ON [dbo].[AgencyGroupMember_DeleteAll] TO Public
+CREATING ALL ON [dbo].[AgencyGroupMember_GetByGroupID] TO Public
+CREATING ALL ON [dbo].[AgencyGroupMember_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AgencyOfficeHistory_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyOfficeHistory_GetByPartnerID] TO Public
+CREATING ALL ON [dbo].[AgencyOfficeHistory_GetByPartnerTotals] TO Public
+CREATING ALL ON [dbo].[AgencyOfficeHistory_GetByUser] TO Public
+CREATING ALL ON [dbo].[AgencyGroupHistory_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyGroupHistory_GetByGroupID] TO Public
+CREATING ALL ON [dbo].[AgencyGroupHistory_GetByGroup] TO Public
+CREATING ALL ON [dbo].[AgencyGroupHistory_GetByGroupTotals] TO Public
+CREATING ALL ON [dbo].[AgencyAgentHistory_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyAgentHistory_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AgencyAgentHistory_GetAgentData] TO Public
+CREATING ALL ON [dbo].[Corporation_Update] TO Public
+CREATING ALL ON [dbo].[Corporation_SelectOne] TO Public
+CREATING ALL ON [dbo].[Corporation_SelectByCorporationID] TO Public
+CREATING ALL ON [dbo].[Corporation_Insert] TO Public
+CREATING ALL ON [dbo].[Corporation_Delete] TO Public
+CREATING ALL ON [dbo].[Corporation_GetByUserID] TO Public
+CREATING ALL ON [dbo].[Corporation_GetForAdmin] TO Public
+CREATING ALL ON [dbo].[CorporationEmployee_Select] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_Update] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_SelectOne] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_SelectByCorporationID] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_Insert] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_Delete] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_UpdateStatus] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_IsDelegateByID] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_ListCorporateDelegates] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_GetPrimaryDelegateID] TO Public
+CREATING ALL ON [dbo].[CorporationDelegate_GetPrimaryDelegatesByUserID] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_Update] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_Select] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_SelectByCorporationID] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_SelectOne] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_SelectDefault] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_SelectOneByWorkshopID] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_Insert] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_Delete] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_GetUsersByWorkshop] TO Public
+CREATING ALL ON [dbo].[CorporationWorkshop_GetWorkshopsByUser] TO Public
+CREATING ALL ON [dbo].[CorporationUserLink_Select] TO Public
+CREATING ALL ON [dbo].[CorporationUserLink_SelectOne] TO Public
+CREATING ALL ON [dbo].[CorporationUserLink_Insert] TO Public
+CREATING ALL ON [dbo].[CorporationUserLink_Delete] TO Public
+CREATING ALL ON [dbo].[CorporationUserWorkshopLink_Update] TO Public
+CREATING ALL ON [dbo].[CorporationUserWorkshopLink_Select] TO Public
+CREATING ALL ON [dbo].[CorporationUserWorkshopLink_SelectOne] TO Public
+CREATING ALL ON [dbo].[CorporationUserWorkshopLink_Insert] TO Public
+CREATING ALL ON [dbo].[CorporationUserWorkshopLink_Delete] TO Public
+CREATING ALL ON [dbo].[CorpEdPermission_ListByAgentID] TO Public
+CREATING ALL ON [dbo].[CorpEdPermission_SelectOne] TO Public
+CREATING ALL ON [dbo].[CorpEdPermission_Insert] TO Public
+CREATING ALL ON [dbo].[CorpEdPermission_Update] TO Public
+CREATING ALL ON [dbo].[CorpEdPermission_AddEdit] TO Public
+CREATING ALL ON [dbo].[CorpEdPermission_Delete] TO Public
+CREATING ALL ON [dbo].[CorporationReferralLink_Select] TO Public
+CREATING ALL ON [dbo].[CorporationReferralLink_SelectOne] TO Public
+CREATING ALL ON [dbo].[CorporationReferralLink_Insert] TO Public
+CREATING ALL ON [dbo].[CorporationReferralLink_Delete] TO Public
+CREATING ALL ON [dbo].[AgencyAgentSnapshot_Clear] TO Public
+CREATING ALL ON [dbo].[AgencyAgentSnapshot_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyAgentSnapshot_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AgencyAgentSnapshot_GetLastDateUpdate] TO Public
+CREATING ALL ON [dbo].[AgencyAgentSnapshot_UpdateAUMAHAInfo] TO Public
+CREATING ALL ON [dbo].[AgencyAgentSnapshot_GetAgentData] TO Public
+CREATING ALL ON [dbo].[AgencyClientStickinessSnapshot_Clear] TO Public
+CREATING ALL ON [dbo].[AgencyClientStickinessSnapshot_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyClientStickinessSnapshot_CalculateStars] TO Public
+CREATING ALL ON [dbo].[AgencyClientStickinessSnapshot_GetByUserID] TO Public
+CREATING ALL ON [dbo].[AgencyClientStickinessSnapshot_GetData] TO Public
+CREATING ALL ON [dbo].[AgencyActionItemsReviewed_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyActionItemsReviewed_Clear] TO Public
+CREATING ALL ON [dbo].[AgencyActionItemsReviewed_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyActionItemsReviewed_GetByAgentAndUser] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_Select] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_Update] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_SelectGroup] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_SelectOneGroup] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_Delete] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_DeleteViewed] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_MarkAllViewed] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_GetUnviewedCountForUser] TO Public
+CREATING ALL ON [dbo].[AgencyAgentMessage_SendGroupMessage] TO Public
+CREATING ALL ON [dbo].[AgencyGoals_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyGoals_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyGoals_Update] TO Public
+CREATING ALL ON [dbo].[AgencyGoals_Delete] TO Public
+CREATING ALL ON [dbo].[AgencyCancelledAgentsToHide_Insert] TO Public
+CREATING ALL ON [dbo].[AgencyCancelledAgentsToHide_SelectOne] TO Public
+CREATING ALL ON [dbo].[AgencyCancelledAgentsToHide_GetByAgentAndUser] TO Public
+CREATING ALL ON [dbo].[AgencyCancelledAgentsToHide_GetByAgent] TO Public
+CREATING ALL ON [dbo].[LbsBusinessData_Select] TO Public
+CREATING ALL ON [dbo].[LbsBusinessData_Insert] TO Public
+CREATING ALL ON [dbo].[LbsBusinessData_Update] TO Public
+CREATING ALL ON [dbo].[LbsBusinessData_Delete] TO Public
+CREATING ALL ON [dbo].[LbsBusinessData_GetByUserID] TO Public
+CREATING ALL ON [dbo].[HistoricalSnapshot_Insert] TO Public
+CREATING ALL ON [dbo].[HistoricalSnapshot_GetByUserID] TO Public
+CREATING ALL ON [dbo].[HistoricalSnapshot_GetByUserIDSumByDomain] TO Public
+CREATING ALL ON [dbo].[HistoricalSnapshot_GetByUserIDSumBySubDomain] TO Public
+CREATING ALL ON [dbo].[HistoricalSnapshot_GetByUserIDDomain] TO Public
+CREATING ALL ON [dbo].[FactLink_Insert] TO Public
+CREATING ALL ON [dbo].[FactLink_Remove] TO Public
+CREATING ALL ON [dbo].[FactLink_RemoveFact1] TO Public
+CREATING ALL ON [dbo].[FactLink_RemoveSingleLink] TO Public
+CREATING ALL ON [dbo].[FactLink_GetByUserID] TO Public
+CREATING ALL ON [dbo].[ClientReferral_Select] TO Public
+CREATING ALL ON [dbo].[ClientReferral_SelectOne] TO Public
+CREATING ALL ON [dbo].[ClientReferral_SelectByCreatedClient] TO Public
+CREATING ALL ON [dbo].[ClientReferral_SelectAllForClient] TO Public
+CREATING ALL ON [dbo].[ClientReferral_SelectAllForAdvisor] TO Public
+CREATING ALL ON [dbo].[ClientReferral_SelectAllAsContact] TO Public
+CREATING ALL ON [dbo].[ClientReferral_SelectAllAsNonClientContact] TO Public
+CREATING ALL ON [dbo].[ClientReferral_Insert] TO Public
+CREATING ALL ON [dbo].[ClientReferral_Update] TO Public
+CREATING ALL ON [dbo].[ClientReferral_Delete] TO Public
+CREATING ALL ON [dbo].[ClientReferral_DeleteAllAdvisorContacts] TO Public
+Setting Recovery Model to SIMPLE on non-production database [lbs_corped].
+Enabling Nexus user(non-production)...
+Ensuring Nexus login exists.
+Adding Nexus user to database.
+
+BEGIN PostSchema Data Upgrade
+Begin POSTSCHEMA Upgrade Modules -------------------------
+0 POSTSCHEMA Upgrade Modules executed -------------------------
+
+Creating System Configuration...
+Service as LocalSystem = false
+Validation Key = rjpfuqDfcEAQC1+2FpmKDoOOGTT9TrZ4I+HgNDXUX2c=
+Decryption Key = MEcuvlbtC4XjOmuO6+lU6Sv+WdASFjPnF+T6H/+LaI4=
+Mail Server = vcorpmail01.ema.emoneyadvisor.com
+Error Trap Email = 
+Production Environment = False
+Environment = Development
+Force HTTPS = False
+No Nexus = False
+Change Detection = False
+File Share = \\mds\bulkfile\application\
+PriceUpdateMode = 
+Resource has been reset.
+
+Cleaning up unused Queue tables...
+
+Setting up service user...
+Service User = TOMZ01\emaserviceuser
+
+Setting up security...
+Enabling service user...
+Adding service user to database...
+Granting service user access to database...
+User, group, or role 'TOMZ01\emaserviceuser' already exists in the current database.
+Creating schema for service user...
+There is already an object named 'TOMZ01\emaserviceuser' in the database.
+CREATE SCHEMA failed due to previous errors.
+Allowing service to subscribe to query notifications...
+User, group, or role 'SqlDependencyUser' already exists in the current database.
+Revoking service user dbo role...
+Updating Service User on SQL Jobs...
+Setting permissions on C:\Users\Default\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.MSO for TOMZ01\emaserviceuser
+"C:\Users\Default\AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.MSO" /G TOMZ01\emaserviceuser:F /E /T
+Access is denied.
+
+Setting permissions on C:\Documents and Settings\Default User\Local Settings\Temporary Internet Files\Content.MSO for TOMZ01\emaserviceuser
+"C:\Documents and Settings\Default User\Local Settings\Temporary Internet Files\Content.MSO" /G TOMZ01\emaserviceuser:F /E /T
+Access is denied.
+
+Permissions on C:\projects.net\guardian\CorpEd\ema\resources\. are ok...
+Setting permissions on C:\projects.net\guardian\CorpEd\ema\resources\. for TOMZ01\ASPNET
+"C:\projects.net\guardian\CorpEd\ema\resources\." /G TOMZ01\ASPNET:F /E /T
+No mapping between account names and security IDs was done.
+
+Permissions on C:\Program Files (x86)\ChartFX for .NET 6.2\ChartFX62\Temp are ok...
+TEMPDATA directory: C:\projects.net\guardian\CorpEd\ema\TempData\ ALREADY EXISTS
+Permissions on C:\projects.net\guardian\CorpEd\ema\TempData\. are ok...
+Setting permissions on C:\projects.net\guardian\CorpEd\ema\TempData\. for TOMZ01\ASPNET
+"C:\projects.net\guardian\CorpEd\ema\TempData\." /G TOMZ01\ASPNET:F /E /T
+No mapping between account names and security IDs was done.
+
+Permissions on C:\windows\system32\..\temp are ok...
+Couldn't create '\\mds\bulkfile\application\' - check FileShare setting
+The network path was not found.
+
+Couldn't create '\\mds\bulkfile\application\' - check FileShare setting
+The network path was not found.
+
+Securing IIS resources
+IIS://localhost/W3SVC/1/Root
+Checking vdir IIS://localhost/W3SVC/1/Root/lbs.corped
+App Status=0
+Microsoft (R) Windows Script Host Version 5.8
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+-----------------------------------------------------------------------
+Securing resources for IIS://localhost/W3SVC/1/Root/lbs.corped
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/resources
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped
+Created directory resources
+Made resources directory: IIS://localhost/W3SVC/1/Root/lbs.corped/resources  readable
+ 
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/tempdata
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped
+Created directory tempdata
+Made tempdata directory: IIS://localhost/W3SVC/1/Root/lbs.corped/tempdata  readable
+ 
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/default/Files/Config
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/default/Files
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/default
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped
+Created directory partner
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner
+Created directory default
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/default
+Created directory Files
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/default/Files
+Created directory Config
+Made config directory not accessable
+ 
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/lbs/Files/Config
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/lbs/Files
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/lbs
+Getting directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner
+Created directory lbs
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/lbs
+Created directory Files
+In directory IIS://localhost/W3SVC/1/Root/lbs.corped/partner/lbs/Files
+Created directory Config
+Made partner config directory not accessable
+-----------------------------------------------------------------------
+ 
+
+Microsoft (R) ASP.NET RegIIS version 4.0.30319.0
+Administration utility to install and uninstall ASP.NET on the local machine.
+Copyright (C) Microsoft Corporation.  All rights reserved.
+Start granting TOMZ01\emaserviceuser access to the IIS configuration and other directories used by ASP.NET.
+Finished granting TOMZ01\emaserviceuser access to the IIS configuration and other directories used by ASP.NET.
+
+
+Setting up partner lbs...
+Setting up partner lbs
+Setting up users for lbs
+Creating super user
+Creating demo producer
+Repairing office users
+Setting up IIS...
+Setting up web for lbs.corped
+Setting up Virtual Directory for lbs.corped
+IIS://localhost/W3SVC/1/Root
+Checking vdir IIS://localhost/W3SVC/1/Root/lbs.corped
+App Status=0
+Creating application pool...
+Creating application...
+Creating ChartFX virtual directory...
+Setting up web service mappings...
+Setting IIS not found script
+Microsoft (R) Windows Script Host Version 5.8
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Securing resources for lbs.corped
+Setting up custom error handlers for:
+  Path:       IIS://localhost/W3SVC/1/Root/lbs.corped
+  To Handler: /lbs.corped/notfound.aspx
+  For :  404,*,
+  Result:     metabase line found.
+  Rescan:     metabase line found.
+  Value:      404,*,URL,/lbs.corped/notfound.aspx
+
+
+
+BEGIN Final Data Upgrade
+Begin FINAL Upgrade Modules -------------------------
+0 FINAL Upgrade Modules executed -------------------------
+
+Setting up system data...
+	Loading Security data
+	Security data already exists
+	Loading Education Expenses data
+	Loading Major Account Type data
+	Major Account Type data already exists
+
+Setting up audit subsystem
+DUMPFOLDER was not specified. Defaulting to c:\temp
+Setting up the AUDIT database for lbs_corped
+DONE: Setting up the AUDIT database for lbs_corped
+
+Setting up the APPLICATION database for lbs_corped
+DONE: Setting up the APPLICATION database for lbs_corped
+
+Adding Service User to Audit DB
+User, group, or role 'TOMZ01\emaserviceuser' already exists in the current database.
+DONE: Adding Service User, TOMZ01\emaserviceuser
+
+
+Setting up vault database
+Setting up the VAULT database for lbs_corped
+DONE: Setting up the VAULT database for lbs_corped
+
+Setting up the APPLICATION database for lbs_corped
+DONE: Setting up the APPLICATION database for lbs_corped
+
+Adding Service User to Vault DB
+User, group, or role 'TOMZ01\emaserviceuser' already exists in the current database.
+DONE: Adding Service User, TOMZ01\emaserviceuser
+
+Setting up audit subsystem
+DUMPFOLDER was not specified. Defaulting to c:\temp
+Setting up the AUDIT database for lbs_corped
+DONE: Setting up the AUDIT database for lbs_corped
+
+Setting up the APPLICATION database for lbs_corped
+DONE: Setting up the APPLICATION database for lbs_corped
+
+Adding Service User to Audit DB
+User, group, or role 'TOMZ01\emaserviceuser' already exists in the current database.
+DONE: Adding Service User, TOMZ01\emaserviceuser
+
+Setting up presentations...
+   Removing Presentation Appointment Confirmation Letter
+   Removing Presentation Balance Sheets
+   Removing Presentation Business Analysis
+   Removing Presentation Comprehensive Living Balance Sheet
+   Removing Presentation Data Gathering Letter
+   Removing Presentation Data Gathering Reports
+   Removing Presentation Fact Summaries
+   Removing Presentation Fee Based Planning
+   Removing Presentation Financial Analysis
+   Removing Presentation Financial Balance Scorecard
+   Removing Presentation Introduction Letter
+   Removing Presentation Investment Analysis
+   Removing Presentation Investments
+   Removing Presentation Personal Financial Biography
+   Removing Presentation Post Cash Flow Design Meeting Letter
+   Removing Presentation Post Protection Analysis Letter
+   Removing Presentation Post Retirement Analysis Letter
+   Removing Presentation Protection Analysis
+   Removing Presentation Retirement Analysis Introduction Letter
+   Removing Presentation Review Letter
+   Removing Presentation Single Need
+   Removing Presentation Stock Options
+   Removing Presentation Supplemental Information
+   Removing Presentation To Do Lists and Action Steps
+   Adding presentation ProtectionAnalysis.xml
+   Added presentation Protection Analysis
+   Adding presentation FinancialAnalysis.xml
+   Added presentation Financial Analysis
+   Adding presentation InvestmentAnalysis.xml
+   Added presentation Investment Analysis
+   Adding presentation BusinessAnalysis.xml
+   Added presentation Business Analysis
+   Adding presentation SingleNeed.xml
+   Added presentation Single Need
+   Adding presentation SupplementalInformation.xml
+   Added presentation Supplemental Information
+   Adding presentation PersonalFinancialBiography.xml
+   Added presentation Personal Financial Biography
+   Adding presentation FeeBasedPlanning.xml
+   Added presentation Fee Based Planning
+   Adding presentation ComprehensiveLivingBalanceSheet.xml
+   Added presentation Comprehensive Living Balance Sheet
+   Adding presentation BalanceSheets.xml
+   Added presentation Balance Sheets
+   Adding presentation Investments.xml
+   Added presentation Investments
+   Adding presentation StockOptions.xml
+   Added presentation Stock Options
+   Adding presentation FactSummaries.xml
+   Added presentation Fact Summaries
+   Adding presentation FinancialBalanceScorecard.xml
+   Added presentation Financial Balance Scorecard
+   Adding presentation ToDoListsAndActionSteps.xml
+   Added presentation To Do Lists and Action Steps
+   Adding presentation IntroductionLetter.xml
+   Added presentation Introduction Letter
+   Adding presentation AppointmentConfirmationLetter.xml
+   Added presentation Appointment Confirmation Letter
+   Adding presentation DataGatheringConfirmationLetter.xml
+   Added presentation Data Gathering Letter
+   Adding presentation PostPresentationLetter.xml
+   Added presentation Post Protection Analysis Letter
+   Adding presentation PostCashFlowDesignMeetingLetter.xml
+   Added presentation Post Cash Flow Design Meeting Letter
+   Adding presentation RetirementIntroductionLetter.xml
+   Added presentation Retirement Analysis Introduction Letter
+   Adding presentation PostRetirementLetter.xml
+   Added presentation Post Retirement Analysis Letter
+   Adding presentation ReviewLetter.xml
+   Added presentation Review Letter
+   Adding presentation DataGatheringReports.xml
+   Added presentation Data Gathering Reports
+Setting up PlayLists...
+   Retrieving PlayLists...
+   Removing PlayLists...
+      Removing PlayList Insurance - Type
+      Removing PlayList Insurance - Amount
+      Removing PlayList Legacy Strategies
+      Removing PlayList Retirement Analysis
+      Removing PlayList Estate Analysis
+      Removing PlayList Business Analysis
+      Removing PlayList Investment Analysis
+   Retrieving PlayList Templates...
+   Adding PlayLists...
+      Adding PlayList LegacyStrategies.xml
+      Added PlayList Legacy Strategies
+      Adding PlayList RetirementAnalysis.xml
+      Added PlayList Retirement Analysis
+      Adding PlayList InvestmentAnalysis.xml
+      Added PlayList Investment Analysis
+      Adding PlayList BusinessAnalysis.xml
+      Added PlayList Business Analysis
+      Adding PlayList EstateAnalysis.xml
+      Added PlayList Estate Analysis
+      Adding PlayList InsuranceAmount.xml
+      Added PlayList Insurance - Amount
+      Adding PlayList InsuranceType.xml
+      Added PlayList Insurance - Type
+Setup Successful
+Setup Stopped: Aug 18, 2016 01:10:22 PM -04:00
+Setup Duration: 00:00:51.9838889
+Class addr: 830520 Seed sent: 1544496530
+Class addr: 830520 MD5 received: 4feeb72de2983d59a253107f2182c71d, we have: 4feeb72de2983d59a253107f2182c71d
+Class addr: 840310 Seed sent: 1328774270
+Class addr: 840310 MD5 received: 2c2444d603fbede9f090819060ae0121, we have: 2c2444d603fbede9f090819060ae0121
