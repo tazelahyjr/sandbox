@@ -4,7 +4,6 @@ on:
   push: 
     branches-ignore: 
         - 'bugfix/**'
-        - '**/*'
 
 # https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-when-your-workflow-runs/control-the-concurrency-of-workflows-and-jobs
 concurrency: 
