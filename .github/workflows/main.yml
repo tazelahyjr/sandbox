@@ -1,0 +1,66 @@
+name: Sandbox Job Execution
+
+on: 
+  push: 
+    branches-ignore: 
+        - 'bugfix/**'
+        - '**/*'
+
+# https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-when-your-workflow-runs/control-the-concurrency-of-workflows-and-jobs
+concurrency: 
+    group: sandbox-testing
+    cancel-in-progress: true 
+
+jobs:
+    playwright-a:
+        name: Playwright Dashboard A
+        runs-on: ubuntu-22.04
+        outputs:
+            job_status: ${{steps.job_status.outputs.original_status}}
+        continue-on-error: true
+        steps: 
+          - name: Just show something
+            run: echo "A"
+          - name: FAIL
+            if: true
+            run: exit 1
+          - name: Check status
+            run: echo ${{job.status}}
+          - name: run_status
+            if: ${{always()}}
+            id: job_status
+            run: echo "original_status=${{job.status}}" >> $GITHUB_OUTPUT
+
+    playwright-b:
+       needs: playwright-a
+       if: ${{always() && needs.playwright-a.outputs.job_status == 'failure'}}  
+       name: Playwright Dashboard B
+       runs-on: ubuntu-22.04       
+       steps: 
+          - name: Just show something
+            if: ${{ needs.playwright-a.result == 'failure'}}
+            run: echo "B"
+          - name: What is job A result
+            run: echo ${{needs.playwright-a.result}}
+          - name: Failure?
+            if: ${{ failure()}}
+            run: echo "FAILURE"
+          - name: Fail this if A files
+            if: ${{ needs.playwright-a.outputs.job_status == 'failure'}}
+            run: exit 1
+
+    playwright-c:
+        needs: playwright-a
+        if: ${{always() && needs.playwright-a.result == 'success'}}
+        name: Playwright Dashboard C
+        runs-on: ubuntu-22.04         
+        steps:
+          - name: Just show something
+            run: echo "C"
+          - name: What is job A result
+            run: echo ${{needs.playwright-a.result}}
+          - name: Failure?
+            if: ${{ failure() }}
+            run: echo "FAILURE"
+          - name: Output
+            run: echo ${{needs.playwright-a.outputs}}
